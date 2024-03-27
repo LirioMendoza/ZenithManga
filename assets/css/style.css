@@ -1,0 +1,106 @@
+/* Estilos generales */
+body, ul, li, p, a, label, input, div {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px !important;
+  font-weight: 300 !important;
+}
+.h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 48px !important;
+  font-weight: 200 !important;
+}
+.h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px !important;
+  font-weight: 300;
+}
+.h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px !important;
+}
+
+/* Estilos de logo */
+.logo { font-weight: 500 !important;}
+
+/* Estilos de texto y fondo */
+.text-warning {  color: #ff0000 !important;}
+.bg-dark { background-color: #000000 !important;}
+.bg-black { background-color: #1d242d !important;}
+
+/* Estilos de botones */
+.btn-success {
+  background-color: #ff0000 !important;
+}
+
+/* Estilos del Nav */
+#templatemo_nav_top { min-height: 50px;}
+#templatemo_nav_top * { font-size: .94em !important; margin-top: 2px;}
+#templatemo_main_nav a { color: #212934;}
+#templatemo_main_nav a:hover { color: #ff0000; border-bottom: solid 3px #ff0000; transition: transform 250ms ease-in-out;}
+#templatemo_main_nav .navbar .nav-icon { margin-right: 20px;}
+
+/* Estilos del carousel */
+  /* Fondo */
+#template-mo-zay-hero-carousel { background: #ff000036 !important;}
+  /* Botones sig. ant. */
+#carousel-related-product .slick-slide:focus { outline: none !important;}
+#carousel-related-product .slick-dots li button:before {
+  font-size: 15px;
+  margin-top: 20px;
+}
+#template-mo-zay-hero-carousel .carousel-control-next i,
+#template-mo-zay-hero-carousel .carousel-control-prev i {
+  color: #ff0000 !important;
+  font-size: 2.8em !important;
+}
+  /* Estado actual */
+#template-mo-zay-hero-carousel .carousel-indicators li {
+  margin-top: -50px;
+  background-color: #ff0000;
+}
+
+/* Estilos del Footer */
+#tempaltemo_footer a { color: #dcdde1;}
+#tempaltemo_footer a:hover { color: #ff0000; border-bottom: solid 3px #ff000058; transition: transform 250ms ease-in-out;}
+#tempaltemo_footer ul.footer-link-list li { padding-top: 10px;}
+#tempaltemo_footer ul.footer-icons li {
+  width: 2.6em;
+  height: 2.6em;
+  line-height: 2.6em;
+}
+#tempaltemo_footer ul.footer-icons li:hover {
+  background-color: #cfd6e1;
+  transition: .5s;
+}
+#tempaltemo_footer ul.footer-icons li:hover i {
+  color: #212934;
+  transition: .5s;
+}
+#tempaltemo_footer .border-light { border-color: #2d343f !important;}
+
+
+
+/* Estilos para responsividad */
+  /* Estilos para pantallas chicas */
+@media (min-width: 576px) {
+  .tempaltemo-carousel .h1 { font-size: 1em !important;}
+}
+
+  /* Estilos para pantallas medianas */
+@media (min-width: 768px) {
+  #templatemo_main_nav .navbar-nav {max-width: 450px;}
+ }
+
+  /* Estilos para pantallas grandes */
+@media (min-width: 992px) {
+  #templatemo_main_nav .navbar-nav {max-width: 550px;}
+  #template-mo-zay-hero-carousel .carousel-item {min-height: 30rem !important;}
+  .product-wap .h3, .product-wap li, .product-wap i, .product-wap p {font-size: 18px !important;}
+  .product-wap .product-color-dot {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+  /* Estilos para pantallas muy grandes */
+@media (min-width: 1200px) {}
