@@ -12,8 +12,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <!-- Iconos -->
     <link rel="stylesheet" href="assets/css/fontawesome.min.css"> 
-    
-
 </head>
 
 <body>
@@ -48,11 +46,14 @@
                 Zenith
             </a>
             <!-- Menu de hambuergesa (responsive) -->
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- Menu de opciones -->
-            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
+                id="templatemo_main_nav">
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
@@ -69,16 +70,19 @@
                         </li>
                     </ul>
                 </div>
+                <br>
                 <div class="navbar align-self-center d-flex">
                     <!-- Imagen de carrito -->
                     <a class="nav-icon position-relative text-decoration-none" href="#">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">0</span>
+                        <span
+                            class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">0</span>
                     </a>
                     <!-- Imagen de usuario -->
                     <a class="nav-icon position-relative text-decoration-none" href="#">
                         <i class="fa fa-fw fa-user text-dark mr-3"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
+                        <span
+                            class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
                     </a>
                 </div>
             </div>
@@ -179,8 +183,10 @@
                 </div>
                 <div class="col-auto">
                     <div class="input-group mb-2">
-                        <input type="text" class="form-control bg-light border-light" id="subscribeEmail" placeholder="Correo electronico">
-                        <div class="input-group-text btn-success text-light">Subscribe</div>
+                        <form action="php/suscripcion.php" method="post" style="display: flex;">
+                            <input class="form-control bg-light border-light" type="email" name="correo" id="correo" placeholder="Correo electronico">
+                            <input class="input-group-text btn-success text-light" type="submit" value="Enviar">
+                        </form>
                     </div>
                 </div>
             </div>
@@ -202,7 +208,8 @@
     <!-- FIN Footer -->
 
     <!-- Start Script -->
-    <script src=""></script>
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- End Script -->
 </body>
 </html>

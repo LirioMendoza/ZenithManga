@@ -41,7 +41,7 @@ body, ul, li, p, a, label, input, div {
 
 /* Estilos del carousel */
   /* Fondo */
-#template-mo-zay-hero-carousel { background: #ff000036 !important;}
+#template-mo-zay-hero-carousel { background-image: url('../../img/carrusel/fondo2.gif'); background-repeat: no-repeat; background-size: cover; background-position: center center; opacity: 0.85;}
   /* Botones sig. ant. */
 #carousel-related-product .slick-slide:focus { outline: none !important;}
 #carousel-related-product .slick-dots li button:before {
