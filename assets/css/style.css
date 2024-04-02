@@ -22,6 +22,22 @@ body, ul, li, p, a, label, input, div {
 /* Estilos de logo */
 .logo { font-weight: 500 !important;}
 
+.scroll-to-top {
+    position: fixed; 
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    transition: all 0.3s ease-in-out;
+    border-radius: 40%;
+    background-color: hsl(62, 100%, 50%);
+    color: #000000;
+}
+
+.scroll-to-top:hover {
+    background-color: hsl(0, 100%, 50%);
+    color: #000000;
+}
+
 /* Estilos de texto y fondo */
 .text-warning {  color: #ff0000 !important;}
 .bg-dark { background-color: #000000 !important;}
@@ -104,3 +120,4 @@ body, ul, li, p, a, label, input, div {
 
   /* Estilos para pantallas muy grandes */
 @media (min-width: 1200px) {}
+

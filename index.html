@@ -70,7 +70,7 @@
                             <a class="nav-link" href="about.html">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="shop.html">Tienda</a>
+                            <a class="nav-link" href="shop.php">Tienda</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.html">Contacto</a>
@@ -215,12 +215,11 @@
                         </li>
                         <li>
                             <i class="fa fa-phone fa-fw"></i>
-                            <a class="text-decoration-none" href="tel:01-800-123456789">01-800-123456789</a>
+                            <a class="text-decoration-none" href="#">01-800-123456789</a>
                         </li>
                         <li>
                             <i class="fa fa-envelope fa-fw"></i>
-                            <a class="text-decoration-none"
-                                href="administracion@zenithmanga.com">administracion@zenithmanga.com</a>
+                            <a class="text-decoration-none" href="#">administracion@zenithmanga.com</a>
                         </li>
                         <br>
                         <li style="margin-left: 50px;">
@@ -237,9 +236,9 @@
                                 Inicio</a></li>
                         <li><i class="fa fa-arrow-right fa-fw"></i><a class="text-decoration-none" href="about.html">
                                 Nosotros</a></li>
-                        <li><i class="fa fa-arrow-right fa-fw"></i><a class="text-decoration-none" href="shop.html">
+                        <li><i class="fa fa-arrow-right fa-fw"></i><a class="text-decoration-none" href="shop.php">
                                 Tienda</a></li>
-                        <li><i class="fa fa-arrow-right fa-fw"></i><a class="text-decoration-none" href="shop.html">
+                        <li><i class="fa fa-arrow-right fa-fw"></i><a class="text-decoration-none" href="shop.php">
                                 Productos</a></li>
                         <li><i class="fa fa-arrow-right fa-fw"></i><a class="text-decoration-none" href="contact.html">
                                 Contacto</a></li>
@@ -297,9 +296,11 @@
                 </div>
                 <div class="col-auto">
                     <div class="input-group mb-2">
-                        <form action="php/suscripcion.php" method="post" style="display: flex;">
-                            <input class="form-control bg-light border-light" type="email" name="correo" id="correo" placeholder="Correo electronico">
-                            <input class="input-group-text btn-success text-light" type="submit" value="Enviar">
+                        <form action="php/suscripcion.php" method="post" style="display: flex;" name="formulario">
+                            <input class="form-control bg-light border-light" type="email" name="correo" id="correo"
+                                placeholder="Correo electronico">
+                            <input class="input-group-text btn-success text-light" type="submit" value="Suscribirse">
+                            <input type="hidden" name="redirect" value="../index.html">
                         </form>
                     </div>
                 </div>
@@ -321,9 +322,15 @@
     </footer>
     <!-- FIN Footer -->
 
+    <!-- Bottom de scroll -->
+    <button class="scroll-to-top"><i class="fa fa-arrow-up fa-fw"></i></button>
+    <!-- FIN Bottom de scroll -->
+
     <!-- Start Script -->
     <script src="assets/js/jquery-1.11.0.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="js/validacionSuscripciones.js"></script>
+    <script src="js/scroll.js"></script>
     <!-- End Script -->
 </body>
 

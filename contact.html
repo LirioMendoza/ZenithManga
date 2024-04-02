@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Proyecto Final-Contact</title>
     <meta charset="utf-8">
@@ -9,7 +10,8 @@
     <!-- Estilos propios -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Estilos de letra -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <!-- Iconos -->
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
 </head>
@@ -45,59 +47,60 @@
 
     <!-- Nav -->
     <nav class="navbar navbar-expand-lg navbar-light shadow">
-    <div class="container d-flex justify-content-between align-items-center">
-        <!-- Logo empresa -->
-        <a class="navbar-brand text-warning logo h1 align-self-center" href="index.html">
-            Zenith
-        </a>
-        <!-- Menu de hambuergesa (responsive) -->
-        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-            data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- Menu de opciones -->
-        <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
-            id="templatemo_main_nav">
-            <div class="flex-fill">
-                <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="shop.html">Tienda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-            <br>
-            <div class="navbar align-self-center d-flex">
-                <!-- Imagen de carrito -->
-                <a class="nav-icon position-relative text-decoration-none" href="#">
-                    <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                    <span
-                        class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">0</span>
-                </a>
-                <!-- Imagen de usuario -->
-                <a class="nav-icon position-relative text-decoration-none" href="#">
-                    <i class="fa fa-fw fa-user text-dark mr-3"></i>
-                    <span
-                        class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
-                </a>
+        <div class="container d-flex justify-content-between align-items-center">
+            <!-- Logo empresa -->
+            <a class="navbar-brand text-warning logo h1 align-self-center" href="index.html">
+                Zenith
+            </a>
+            <!-- Menu de hambuergesa (responsive) -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Menu de opciones -->
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
+                id="templatemo_main_nav">
+                <div class="flex-fill">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="shop.php">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+                <br>
+                <div class="navbar align-self-center d-flex">
+                    <!-- Imagen de carrito -->
+                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                        <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+                        <span
+                            class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">0</span>
+                    </a>
+                    <!-- Imagen de usuario -->
+                    <a class="nav-icon position-relative text-decoration-none" href="#">
+                        <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                        <span
+                            class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
     </nav>
     <!-- FIN Nav -->
 
 
     <!-- Body principal -->
-    <div class="container-fluid bg-light py-5" style="background-image: url('img/carrusel/fondo.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <div class="container-fluid bg-light py-5"
+        style="background-image: url('img/carrusel/fondo.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
         <div class="col-md-6 m-auto text-center">
             <h1>Contactanos</h1>
             <p>
@@ -121,35 +124,38 @@
             <br>
             <form action="/ZenithManga/php/contacto.php" method="post">
                 <label for="nombre"><strong>Nombre:</strong></label>
-                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre...">
+                <input class="input-form" type="text" id="nombre" name="nombre" placeholder="Tu nombre...">
 
                 <label for="apellido"><strong>Apellido:</strong></label>
-                <input type="text" id="apellido" name="apellido" placeholder="Tu apellido...">
+                <input class="input-form" type="text" id="apellido" name="apellido" placeholder="Tu apellido...">
 
                 <label for="correo"><strong>Correo electrónico:</strong></label>
-                <input type="email" id="correo" name="correo" placeholder="Tu correo electrónico...">
+                <input class="input-form" type="email" id="correo" name="correo" placeholder="Tu correo electrónico...">
 
                 <label for="telefono"><strong>Teléfono:</strong></label>
-                <input type="tel" id="telefono" name="telefono" placeholder="Tu número de teléfono...">
+                <input class="input-form" type="tel" id="telefono" name="telefono"
+                    placeholder="Tu número de teléfono...">
 
                 <label for="mensaje"><strong>Deja tu mensaje o sugerencia:</strong></label>
-                <textarea id="mensaje" name="mensaje" placeholder="Tu mensaje..."></textarea>
+                <textarea class="input-form" id="mensaje" name="mensaje" placeholder="Tu mensaje..."></textarea>
 
                 <div class="politica">
                     <input type="checkbox" id="politica" name="politica" style="width: 20% !important;">
                     <label for="politica">He leído y acepto la <a href="#">Política de privacidad</a>.</label>
                 </div>
-                <button type="submit">Enviar mensaje</button>
+                <button class="button-form" type="submit">Enviar mensaje</button>
             </form>
         </div>
         <br><br>
     </div>
     <br>
-    <div style="text-align: center; background-image: url('img/carrusel/fondo.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    <div
+        style="text-align: center; background-image: url('img/carrusel/fondo.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
         <br> <br>
         <h1 style="text-align: center;">Nuestra ubicación</h1>
         <p>¡Te esperamos con los brazos abiertos!</p>
-        <p>No importa si eres un fanático del manga o si estás empezando a descubrir este apasionante mundo, en nuestra tienda encontrarás todo lo que necesitas.</p>
+        <p>No importa si eres un fanático del manga o si estás empezando a descubrir este apasionante mundo, en nuestra
+            tienda encontrarás todo lo que necesitas.</p>
         <br><br>
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.8713431821557!2d-99.18728132532861!3d19.331388343906415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ce00015be0a713%3A0x3fc11681a8244370!2sFacultad%20de%20Ingenier%C3%ADa%20UNAM!5e0!3m2!1ses-419!2smx!4v1711587142021!5m2!1ses-419!2smx"
@@ -158,7 +164,7 @@
         <br><br><br>
     </div>
     <!-- FIN Body principal -->
-    
+
     <!-- Footer -->
     <footer class="bg-dark" id="tempaltemo_footer">
         <div class="container">
@@ -173,12 +179,11 @@
                         </li>
                         <li>
                             <i class="fa fa-phone fa-fw"></i>
-                            <a class="text-decoration-none" href="tel:01-800-123456789">01-800-123456789</a>
+                            <a class="text-decoration-none" href="#">01-800-123456789</a>
                         </li>
                         <li>
                             <i class="fa fa-envelope fa-fw"></i>
-                            <a class="text-decoration-none"
-                                href="administracion@zenithmanga.com">administracion@zenithmanga.com</a>
+                            <a class="text-decoration-none" href="#">administracion@zenithmanga.com</a>
                         </li>
                         <br>
                         <li style="margin-left: 50px;">
@@ -195,9 +200,9 @@
                                 Inicio</a></li>
                         <li><i class="fa fa-arrow-right fa-fw"></i><a class="text-decoration-none" href="about.html">
                                 Nosotros</a></li>
-                        <li><i class="fa fa-arrow-right fa-fw"></i><a class="text-decoration-none" href="shop.html">
+                        <li><i class="fa fa-arrow-right fa-fw"></i><a class="text-decoration-none" href="shop.php">
                                 Tienda</a></li>
-                        <li><i class="fa fa-arrow-right fa-fw"></i><a class="text-decoration-none" href="shop.html">
+                        <li><i class="fa fa-arrow-right fa-fw"></i><a class="text-decoration-none" href="shop.php">
                                 Productos</a></li>
                         <li><i class="fa fa-arrow-right fa-fw"></i><a class="text-decoration-none" href="contact.html">
                                 Contacto</a></li>
@@ -253,6 +258,16 @@
                         </li>
                     </ul>
                 </div>
+                <div class="col-auto">
+                    <div class="input-group mb-2">
+                        <form action="php/suscripcion.php" method="post" style="display: flex;" name="formulario">
+                            <input class="form-control bg-light border-light" type="email" name="correo" id="correo"
+                                placeholder="Correo electronico">
+                            <input class="input-group-text btn-success text-light" type="submit" value="Suscribirse">
+                            <input type="hidden" name="redirect" value="../contact.html">
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -271,8 +286,14 @@
     </footer>
     <!-- FIN Footer -->
 
+    <!-- Bottom de scroll -->
+    <button class="scroll-to-top"><i class="fa fa-arrow-up fa-fw"></i></button>
+    <!-- FIN Bottom de scroll -->
+
     <!-- Start Script -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="js/validacionComentarios.js"></script>
+    <script src="js/scroll.js"></script>
     <!-- End Script -->
 </body>
 
@@ -296,7 +317,6 @@
 
     input,
     textarea {
-        width: 100%;
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 5px;
@@ -304,11 +324,15 @@
         margin-bottom: 13px;
     }
 
+    .input-form {
+        width: 100%;
+    }
+
     textarea {
         height: 100px;
     }
 
-    button {
+    .button-form {
         margin-top: 20px;
         padding: 10px 20px;
         border: 1px solid #4963e7;
@@ -318,7 +342,7 @@
         cursor: pointer;
     }
 
-    button:hover {
+    .button-form:hover {
         background-color: #333;
     }
 

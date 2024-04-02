@@ -1,6 +1,7 @@
 <?php
 // Guardamos en variables los datos recibidos
 $correo = $_POST["correo"];
+$redirect = $_POST["redirect"];
 
 // Informacion de nuestra base de datos
 $host = "localhost";
@@ -24,7 +25,7 @@ $consulta = "INSERT INTO `suscripciones` (correo) VALUES ('$correo')";
 
 // Verificamos que la consulta esta correcta
 if (mysqli_query($conexion, $consulta)) {
-  header("Location: ../index.html");
+    header("Location: $redirect");
   exit();
 } else {
   http_response_code(500); // Enviar código de error HTTP 500
