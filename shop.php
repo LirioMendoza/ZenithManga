@@ -181,8 +181,8 @@
                             <div style="height: 10%;">
                                 
                             <form action="shop-single.php" method="post">
-                                <input type="hidden" name="id" id="myID" value="<?php $value['id'] ?>">
-                                <a href="shop-single.php"><button class="btn btn-primary" type="submit">Ver más</button></a>
+                                <input type="hidden" name="id" value="<?php $value['id'] ?>">
+                                <button class="btn btn-primary" type="submit">Ver más</button>
                             </form>
                             </div>
                             <div class="card-rating" style="height: 15%; display: flex; justify-content: flex-end;">

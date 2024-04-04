@@ -86,7 +86,7 @@
     </nav>
     <!-- FIN Nav -->
 
-    <?php echo $_POST['id'] ?>
+    <?php echo $_POST["id"]; ?>
     <!-- Body principal -->
    <!-- Open Content -->
    <section class="bg-light">
