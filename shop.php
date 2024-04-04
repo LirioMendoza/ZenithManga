@@ -85,11 +85,13 @@
         </div>
     </nav>
     <!-- FIN Nav -->
+
     <!-- Body principal -->
+    
     <div class="container-fluid bg-light py-5" style="background-image: url('img/carrusel/fondo.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
         <div class="container">
             <h1 style="color: red">Buscador de mangas</h1>
-            <form action="php/buscador.php" method="get" class="search-form">
+            <form action="#" method="get" class="search-form">
                 <div class="form-group">
                     <label for="categoria">Categoría:</label>
                     <select name="categoria" id="categoria" class="form-control">
@@ -109,8 +111,42 @@
                         <option value="calificacion_asc">Calificación (menor a mayor)</option>
                     </select>
                 </div>
+                <input type="hidden" name="search" value="active">
                 <button type="submit" class="btn btn-success">Buscar</button>
             </form>
+            <?php
+           include ("php/conexion.php");
+            if (isset($_GET['search'])) {
+                $categoria = isset($_GET['categoria']) ? $_GET['categoria'] : "";
+                $orden = isset($_GET['orden']) ? $_GET['orden'] : 'nombre_asc';
+                $sql = "SELECT * FROM productos ";
+                if ($categoria) {
+                $sql .= " WHERE categoria = '$categoria' ";
+                }
+                switch ($orden) {
+                    case "nombre_asc":
+                        $sql .= " ORDER BY nombre ASC;";
+                        break;
+                    case "nombre_desc":
+                        $sql .= " ORDER BY nombre DESC;";
+                        break;
+                    case "calificacion_desc":
+                        $sql .= " ORDER BY calificacion DESC;";
+                        break;
+                    case "calificacion_asc":
+                        $sql .= " ORDER BY calificacion ASC;";
+                        break;
+                }
+            } else {
+                $sql = "SELECT id, nombre, descripcion, precio, calificacion, categoria FROM productos";
+            }
+            $result = $conn->query($sql);
+            $data = array();
+            while ($row = $result->fetch_assoc()) {
+                $data[] = $row;
+            }
+            $conn->close();
+            ?>
         </div>
     </div>
     <br><br>
@@ -118,10 +154,7 @@
     <h1 style="color: red">Nuestros Productos</h1>
     <br><br>
         <div class="row">
-            <?php 
-            include "php/producto.php"; 
-            //include "php/buscador.php";
-            foreach ($data as $key => $value) {  ?>
+            <?php foreach ($data as $key => $value) {  ?>
                 <div class="col-sm-6 col-md-4 col-lg-3 mb-3" style="height: 530px;">
                     <div class="card" style="height: 100%;">
                         <?php
@@ -146,7 +179,11 @@
                                 <h6 class="card-subtitle mb-2 text-muted"><strong>$<?php echo $value['precio'] * 17; ?> MXN</strong></h6>
                             </div>
                             <div style="height: 10%;">
-                                <a href="#" class="btn btn-primary">Ver más</a>
+                                
+                            <form action="shop-single.php" method="post">
+                                <input type="hidden" name="id" id="myID" value="<?php $value['id'] ?>">
+                                <a href="shop-single.php"><button class="btn btn-primary" type="submit">Ver más</button></a>
+                            </form>
                             </div>
                             <div class="card-rating" style="height: 15%; display: flex; justify-content: flex-end;">
                                 <?php for ($i = 0; $i < $value['calificacion']; $i++) { ?>
