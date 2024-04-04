@@ -10,7 +10,8 @@
     <!-- Estilos propios -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Estilos de letra -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <!-- Iconos -->
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
 </head>
@@ -23,16 +24,21 @@
                 <div>
                     <!-- Contacto -->
                     <i class="fa fa-envelope mx-2"></i>
-                    <a class="navbar-sm-brand text-light text-decoration-none" href="#">administracion@zenithmanga.com</a>
+                    <a class="navbar-sm-brand text-light text-decoration-none"
+                        href="#">administracion@zenithmanga.com</a>
                     <i class="fa fa-phone mx-2"></i>
                     <a class="navbar-sm-brand text-light text-decoration-none" href="#">01-800-123456789</a>
                 </div>
                 <div>
                     <!-- Logos redes sociales -->
-                    <a class="text-light" href="http://facebook.com/" target="_blank" rel="sponsored"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
-                    <a class="text-light" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
-                    <a class="text-light" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
-                    <a class="text-light" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin fa-sm fa-fw"></i></a>
+                    <a class="text-light" href="http://facebook.com/" target="_blank" rel="sponsored"><i
+                            class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://www.instagram.com/" target="_blank"><i
+                            class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://www.twitter.com/" target="_blank"><i
+                            class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://www.linkedin.com/" target="_blank"><i
+                            class="fab fa-linkedin fa-sm fa-fw"></i></a>
                 </div>
             </div>
         </div>
@@ -47,11 +53,14 @@
                 Zenith
             </a>
             <!-- Menu de hambuergesa (responsive) -->
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- Menu de opciones -->
-            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
+                id="templatemo_main_nav">
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
@@ -73,12 +82,14 @@
                     <!-- Imagen de carrito -->
                     <a class="nav-icon position-relative text-decoration-none" href="#">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">0</span>
+                        <span
+                            class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">0</span>
                     </a>
                     <!-- Imagen de usuario -->
                     <a class="nav-icon position-relative text-decoration-none" href="#">
                         <i class="fa fa-fw fa-user text-dark mr-3"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
+                        <span
+                            class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
                     </a>
                 </div>
             </div>
@@ -87,8 +98,9 @@
     <!-- FIN Nav -->
 
     <!-- Body principal -->
-    
-    <div class="container-fluid bg-light py-5" style="background-image: url('img/carrusel/fondo.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+
+    <div class="container-fluid bg-light py-5"
+        style="background-image: url('img/carrusel/fondo.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
         <div class="container">
             <h1 style="color: red">Buscador de mangas</h1>
             <form action="#" method="get" class="search-form">
@@ -121,7 +133,7 @@
                 $orden = isset($_GET['orden']) ? $_GET['orden'] : 'nombre_asc';
                 $sql = "SELECT * FROM productos ";
                 if ($categoria) {
-                $sql .= " WHERE categoria = '$categoria' ";
+                    $sql .= " WHERE categoria = '$categoria' ";
                 }
                 switch ($orden) {
                     case "nombre_asc":
@@ -151,10 +163,10 @@
     </div>
     <br><br>
     <div class="container">
-    <h1 style="color: red">Nuestros Productos</h1>
-    <br><br>
+        <h1 style="color: red">Nuestros Productos</h1>
+        <br><br>
         <div class="row">
-            <?php foreach ($data as $key => $value) {  ?>
+            <?php foreach ($data as $key => $value) { ?>
                 <div class="col-sm-6 col-md-4 col-lg-3 mb-3" style="height: 530px;">
                     <div class="card" style="height: 100%;">
                         <?php
@@ -167,16 +179,24 @@
                         <img src="<?php echo $imagen; ?>" alt="Card image cap" class="card-img-top" style="height: 150px;">
                         <div class="card-body">
                             <div style="height: 10%;">
-                                <h5 class="card-title"><?php echo $value['nombre']; ?></h5>
+                                <h5 class="card-title">
+                                    <?php echo $value['nombre']; ?>
+                                </h5>
                             </div>
                             <div style="height: 10%;">
-                                <p style="display: flex; justify-content: flex-end; color: red ;" ><strong><?php echo $value['categoria']; ?></strong></p>
+                                <p style="display: flex; justify-content: flex-end; color: red ;"><strong>
+                                        <?php echo $value['categoria']; ?>
+                                    </strong></p>
                             </div>
                             <div style="height: 40%;">
-                                <p style="font-size: 1rem !important;" class="card-text"><?php echo $value['descripcion']; ?></p>
+                                <p style="font-size: 1rem !important;" class="card-text">
+                                    <?php echo $value['descripcion']; ?>
+                                </p>
                             </div>
                             <div style="height: 15%;">
-                                <h6 class="card-subtitle mb-2 text-muted"><strong>$<?php echo $value['precio'] * 17; ?> MXN</strong></h6>
+                                <h6 class="card-subtitle mb-2 text-muted"><strong>$
+                                        <?php echo $value['precio'] * 17; ?> MXN
+                                    </strong></h6>
                             </div>
                             <div style="height: 10%;">
                                 <form action="shop-single.php" method="post" id="verMasForm">
@@ -278,23 +298,28 @@
                 <div class="col-auto me-auto">
                     <ul class="list-inline text-left footer-icons">
                         <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                            <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i
+                                    class="fab fa-facebook-f fa-lg fa-fw"></i></a>
                         </li>
                         <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                            <a class="text-light text-decoration-none" target="_blank"
+                                href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
                         </li>
                         <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+                            <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i
+                                    class="fab fa-twitter fa-lg fa-fw"></i></a>
                         </li>
                         <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                            <a class="text-light text-decoration-none" target="_blank"
+                                href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-auto">
                     <div class="input-group mb-2">
                         <form action="php/suscripcion.php" method="post" style="display: flex;" name="formulario">
-                            <input class="form-control bg-light border-light" type="email" name="correo" id="correo" placeholder="Correo electronico">
+                            <input class="form-control bg-light border-light" type="email" name="correo" id="correo"
+                                placeholder="Correo electronico">
                             <input class="input-group-text btn-success text-light" type="submit" value="Suscribirse">
                             <input type="hidden" name="redirect" value="../shop.html">
                         </form>

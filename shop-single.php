@@ -10,7 +10,8 @@
     <!-- Estilos propios -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Estilos de letra -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <!-- Iconos -->
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
 </head>
@@ -23,16 +24,21 @@
                 <div>
                     <!-- Contacto -->
                     <i class="fa fa-envelope mx-2"></i>
-                    <a class="navbar-sm-brand text-light text-decoration-none" href="#">administracion@zenithmanga.com</a>
+                    <a class="navbar-sm-brand text-light text-decoration-none"
+                        href="#">administracion@zenithmanga.com</a>
                     <i class="fa fa-phone mx-2"></i>
                     <a class="navbar-sm-brand text-light text-decoration-none" href="#">01-800-123456789</a>
                 </div>
                 <div>
                     <!-- Logos redes sociales -->
-                    <a class="text-light" href="http://facebook.com/" target="_blank" rel="sponsored"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
-                    <a class="text-light" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
-                    <a class="text-light" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
-                    <a class="text-light" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin fa-sm fa-fw"></i></a>
+                    <a class="text-light" href="http://facebook.com/" target="_blank" rel="sponsored"><i
+                            class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://www.instagram.com/" target="_blank"><i
+                            class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://www.twitter.com/" target="_blank"><i
+                            class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="https://www.linkedin.com/" target="_blank"><i
+                            class="fab fa-linkedin fa-sm fa-fw"></i></a>
                 </div>
             </div>
         </div>
@@ -47,11 +53,14 @@
                 Zenith
             </a>
             <!-- Menu de hambuergesa (responsive) -->
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- Menu de opciones -->
-            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="templatemo_main_nav">
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
+                id="templatemo_main_nav">
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
@@ -73,12 +82,14 @@
                     <!-- Imagen de carrito -->
                     <a class="nav-icon position-relative text-decoration-none" href="#">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">0</span>
+                        <span
+                            class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">0</span>
                     </a>
                     <!-- Imagen de usuario -->
                     <a class="nav-icon position-relative text-decoration-none" href="#">
                         <i class="fa fa-fw fa-user text-dark mr-3"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
+                        <span
+                            class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">+99</span>
                     </a>
                 </div>
             </div>
@@ -87,23 +98,23 @@
     <!-- FIN Nav -->
 
     <?php
-        include ("php/conexion.php");
-        if (isset($_POST["id"])) {
-            $id = $_POST["id"];
-            $sql = "SELECT id, nombre, descripcion, precio, calificacion, categoria FROM productos WHERE id = $id";
-        } else {
-            $sql = "SELECT id, nombre, descripcion, precio, calificacion, categoria FROM productos WHERE id = 1";
-        }
-        $result = $conn->query($sql);
-        $data = array();
-        while ($row = $result->fetch_assoc()) {
-            $data[] = $row;
-        }
-        $conn->close();
+    include ("php/conexion.php");
+    if (isset($_POST["id"])) {
+        $id = $_POST["id"];
+        $sql = "SELECT id, nombre, descripcion, precio, calificacion, categoria FROM productos WHERE id = $id";
+    } else {
+        $sql = "SELECT id, nombre, descripcion, precio, calificacion, categoria FROM productos WHERE id = 1";
+    }
+    $result = $conn->query($sql);
+    $data = array();
+    while ($row = $result->fetch_assoc()) {
+        $data[] = $row;
+    }
+    $conn->close();
     ?>
     <!-- Body principal -->
-   <!-- Open Content -->
-   <section class="bg-light">
+    <!-- Open Content -->
+    <section class="bg-light">
         <div class="container pb-5">
             <div class="row">
                 <div class="col-lg-5 mt-5">
@@ -215,79 +226,76 @@
                     </div>
                 </div>
                 <!-- col end -->
-                <?php foreach ($data as $key => $value) {  ?>
+                <?php foreach ($data as $key => $value) { ?>
                     <div class="col-lg-7 mt-5">
                         <div class="card">
-                            <div class="card-body">
-                                <h1 style="color: red" ><strong><?php echo $value["nombre"]; ?></strong></h1>
-                                <p class="py-2"><strong>$<?php echo $value["precio"] * 17; ?> MXN</strong></p>
+                            <div class="card-body" style="background-color: #f5f5f5;">
+                                <h1 style="color: red"><strong>
+                                        <?php echo $value["nombre"]; ?>
+                                    </strong></h1>
+                                <p class="py-2"><strong>Precio: $<?php echo $value["precio"] * 17; ?> MXN
+                                    </strong></p>
                                 <p class="py-2">
-                                <?php for ($i = 0; $i < $value['calificacion']; $i++) { ?>
-                                    <i class="fa fa-star text-warning"></i>
-                                <?php } ?>
-                                <?php for ($i = $value['calificacion']; $i < 5; $i++) { ?>
-                                    <i class="fa fa-star text-secondary"></i>
-                                <?php } ?>
-                                    
-                                    <span class="list-inline-item text-dark">Rating 4.8 | 36 Comments</span>
+                                    <?php for ($i = 0; $i < $value['calificacion']; $i++) { ?>
+                                        <i class="fa fa-star text-warning"></i>
+                                    <?php } ?>
+                                    <?php for ($i = $value['calificacion']; $i < 5; $i++) { ?>
+                                        <i class="fa fa-star text-secondary"></i>
+                                    <?php } ?>
+
+                                    <span class="list-inline-item text-dark">Calificación: <strong>
+                                            <?php echo $value["calificacion"]; ?>
+                                        </strong> | Comentarios: <strong>
+                                            <?php echo $value["calificacion"] * 34; ?>
+                                        </strong></span>
                                 </p>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
-                                        <h4 style="color: red">Brand:</h4 style="color: red">
+                                        <h5 style="color: red">Categoria:</h5>
                                     </li>
                                     <li class="list-inline-item">
-                                        <p class="text-muted"><strong>Easy Wear</strong></p>
+                                        <p class="text-muted"><strong>
+                                                <?php echo $value["categoria"]; ?>
+                                            </strong></p>
                                     </li>
                                 </ul>
 
-                                <h4 style="color: red">Description:</h4 style="color: red">
-                                <p>El manga es un cómic japonés caracterizado por su estilo artístico, narrativa y formato.
+                                <h5 style="color: red">Descripción:</h5>
+                                <p style="text-align: justify;">
+                                    <?php echo $value["descripcion"]; ?> El manga es un cómic japonés caracterizado por su
+                                    estilo artístico, narrativa y formato.
                                     Se distingue por sus líneas finas, ojos grandes, onomatopeyas llamativas y una amplia
                                     variedad de géneros, desde romance hasta ciencia ficción. Se lee de derecha a izquierda,
                                     con diálogos en globos y narración para explicar el contexto. Se publica en páginas
-                                    sueltas, generalmente en blanco y negro, y luego se recopila en volúmenes. </p>
+                                    sueltas, generalmente en blanco y negro, y luego se recopila en volúmenes.
+                                </p>
                                 <ul class="list-inline">
                                     <li class="list-inline-item">
-                                        <h4 style="color: red">Avaliable Color :</h4 style="color: red">
+                                        <h5 style="color: red">Disponiblres en Tienda:</h5>
                                     </li>
                                     <li class="list-inline-item">
-                                        <p class="text-muted"><strong>White / Black</strong></p>
+                                        <p class="text-muted"><strong><?php echo $value["calificacion"] * 3; ?> piezas</strong></p>
                                     </li>
                                 </ul>
 
-                                <h4 style="color: red">Specification:</h4 style="color: red">
+                                <h5 style="color: red">Especificaciones:</h5>
                                 <ul class="list-unstyled pb-3">
-                                    <li>Lorem ipsum dolor sit</li>
-                                    <li>Amet, consectetur</li>
-                                    <li>Adipiscing elit,set</li>
-                                    <li>Duis aute irure</li>
-                                    <li>Ut enim ad minim</li>
-                                    <li>Dolore magna aliqua</li>
-                                    <li>Excepteur sint</li>
+                                    <li>• Tamaño de página: B5 (210 x 297 mm).</li>
+                                    <li>• Grosor del papel: 90-120 g/m².</li>
+                                    <li>• Número de páginas: 200-400 páginas.</li>
+                                    <li>• Encuadernación: Rústica con lomo pegado.</li>
+                                    <li>• Colores: Blanco y negro (con algunas páginas a color).</li>
+                                    <li>• Tipo de impresión: Offset o digital.</li>
+                                    <li>• Calidad de impresión: Buena.</li>
                                 </ul>
 
                                 <form action="" method="GET">
                                     <input type="hidden" name="product-title" value="Activewear">
                                     <div class="row">
-                                        <div class="col-auto">
-                                            <ul class="list-inline pb-3">
-                                                <li class="list-inline-item">Size :
-                                                    <input type="hidden" name="product-size" id="product-size" value="S">
-                                                </li>
-                                                <li class="list-inline-item"><span class="btn btn-success btn-size">S</span>
-                                                </li>
-                                                <li class="list-inline-item"><span class="btn btn-success btn-size">M</span>
-                                                </li>
-                                                <li class="list-inline-item"><span class="btn btn-success btn-size">L</span>
-                                                </li>
-                                                <li class="list-inline-item"><span
-                                                        class="btn btn-success btn-size">XL</span></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-auto">
+                                        <div class="col-6">
                                             <ul class="list-inline pb-3">
                                                 <li class="list-inline-item text-right">
-                                                    Quantity
+                                                    Cantidad: 
                                                     <input type="hidden" name="product-quanity" id="product-quanity"
                                                         value="1">
                                                 </li>
@@ -297,6 +305,17 @@
                                                         id="var-value">1</span></li>
                                                 <li class="list-inline-item"><span class="btn btn-success"
                                                         id="btn-plus">+</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-6">
+                                            <ul class="list-inline pb-3">
+                                                <li class="list-inline-item">Calidad:
+                                                    <input type="hidden" name="product-size" id="product-size" value="S">
+                                                </li>
+                                                <li class="list-inline-item"><span class="btn btn-success btn-size">Regular</span>
+                                                </li>
+                                                <li class="list-inline-item"><span class="btn btn-success btn-size">Premium</span>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -332,7 +351,8 @@
             <div class="row">
                 <!-- Datos de la empresa -->
                 <div class="col-md-4 pt-5">
-                    <h4 style="color: red" class="h4 style="color: red" text-warning border-bottom pb-3 border-light logo">Zenith Manga</h4 style="color: red">
+                    <h5 style="color: red" class="h5 style=" color: red" text-warning border-bottom pb-3 border-light
+                        logo">Zenith Manga</h5>
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>
@@ -355,7 +375,8 @@
 
                 <!-- Links de la pagina -->
                 <div class="col-md-4 pt-5">
-                    <h4 style="color: red" class="h4 style="color: red" text-light border-bottom pb-3 border-light">Nosotros</h4 style="color: red">
+                    <h5 style="color: red" class="h5 style=" color: red" text-light border-bottom pb-3 border-light">
+                        Nosotros</h5>
                     <ul class="list-unstyled text-light footer-link-list">
                         <li><i class="fa fa-arrow-right fa-fw"></i><a class="text-decoration-none" href="index.html">
                                 Inicio</a></li>
@@ -372,7 +393,8 @@
 
                 <!-- Autores de la empresa -->
                 <div class="col-md-4 pt-5">
-                    <h4 style="color: red" class="h4 style="color: red" text-light border-bottom pb-3 border-light">Autores</h4 style="color: red">
+                    <h5 style="color: red" class="h5 style=" color: red" text-light border-bottom pb-3 border-light">
+                        Autores</h5>
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fa fa-user fa-fw"></i>
@@ -402,23 +424,28 @@
                 <div class="col-auto me-auto">
                     <ul class="list-inline text-left footer-icons">
                         <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                            <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i
+                                    class="fab fa-facebook-f fa-lg fa-fw"></i></a>
                         </li>
                         <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                            <a class="text-light text-decoration-none" target="_blank"
+                                href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
                         </li>
                         <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
+                            <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i
+                                    class="fab fa-twitter fa-lg fa-fw"></i></a>
                         </li>
                         <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                            <a class="text-light text-decoration-none" target="_blank"
+                                href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-auto">
                     <div class="input-group mb-2">
                         <form action="php/suscripcion.php" method="post" style="display: flex;" name="formulario">
-                            <input class="form-control bg-light border-light" type="email" name="correo" id="correo" placeholder="Correo electronico">
+                            <input class="form-control bg-light border-light" type="email" name="correo" id="correo"
+                                placeholder="Correo electronico">
                             <input class="input-group-text btn-success text-light" type="submit" value="Suscribirse">
                             <input type="hidden" name="redirect" value="../shop.html">
                         </form>

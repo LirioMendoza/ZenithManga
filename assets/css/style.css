@@ -45,10 +45,10 @@ body, ul, li, p, a, label, input, div {
 
 /* Estilos de botones */
 .btn-success {
-  background-color: #ff0000 !important;
+  background-color: #e40000 !important;
 }
 .btn-success:hover{
-  background-color: #be0000 !important;
+  background-color: #4f0000 !important;
 }
 
 /* Estilos del Nav */
