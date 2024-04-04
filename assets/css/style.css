@@ -19,6 +19,61 @@ body, ul, li, p, a, label, input, div {
   font-size: 22px !important;
 }
 
+/* Estilos del contenedor blanco */
+.bg-white {
+  margin: 0 10px; 
+}
+
+/* Estilos de los bordes del contenedor */
+.border {
+  border: 1px solid #ddd; 
+}
+
+/* Estilos de la tabla */
+.table {
+  width: 100%; 
+}
+
+/* Estilos de las imágenes */
+.img-fluid {
+  max-width: 100%; 
+}
+
+
+/* Estilos para el borde inferior del título */
+.border-bottom {
+  border-bottom: 10px solid red; /* Borde inferior rojo y más grueso */
+  padding-bottom: 0px; /* Espacio entre el borde y el texto */
+  display: inline-block; /* Mostrar como bloque en línea */
+}
+
+/* Estilos para el texto de la tabla */
+.table td {
+  vertical-align: middle; /* Centrar contenido verticalmente */
+}
+
+/* Estilos para el título de cada celda */
+h5 {
+  margin-top: 10px; /* Espacio superior */
+  margin-bottom: 5px; /* Espacio inferior */
+}
+
+/* Estilos para el botón "Ver más" */
+.btn-orange {
+  background-color: red; /* Color de fondo naranja */
+  color: white; /* Color de texto blanco */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Padding interno */
+}
+
+/* Estilos para posicionar el botón en la esquina inferior izquierda */
+.text-start {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 10px; /* Margen exterior */
+}
+
 /* Estilos de logo */
 .logo { font-weight: 500 !important;}
 
@@ -101,26 +156,75 @@ body, ul, li, p, a, label, input, div {
 
 /* Estilos para responsividad */
   /* Estilos para pantallas chicas */
-@media (min-width: 576px) {
-  .tempaltemo-carousel .h1 { font-size: 1em !important;}
-}
-
-  /* Estilos para pantallas medianas */
-@media (min-width: 768px) {
-  #templatemo_main_nav .navbar-nav {max-width: 450px;}
- }
-
-  /* Estilos para pantallas grandes */
-@media (min-width: 992px) {
-  #templatemo_main_nav .navbar-nav {max-width: 550px;}
-  #template-mo-zay-hero-carousel .carousel-item {min-height: 30rem !important;}
-  .product-wap .h3, .product-wap li, .product-wap i, .product-wap p {font-size: 18px !important;}
-  .product-wap .product-color-dot {
-    width: 12px;
-    height: 12px;
+  @media (min-width: 150px) {
+    .tempaltemo-carousel .h1 { font-size: 1em !important;}
+    #noved .img-fluid, #deport .img-fluid, #peleas .img-fluid, #romanticos .img-fluid {height: 7rem !important;}
+    #noved h5, #deport h5, #peleas h5, #romanticos h5{font-size: 0.5rem !important;}
+    .bg-white{height: 19rem !important;}
+    .table-responsive{height: 16.5rem !important;}
+    .btn-orange{
+      height: 19px !important;
+      padding: 5px !important;
+      font-size: 0.5rem !important;
+      margin-top: -118px !important; 
+    }
+    .fw-bold{
+      margin-bottom: -12px !important;
+      font-size: 0.95rem !important;
+    }
   }
-}
-
-  /* Estilos para pantallas muy grandes */
-@media (min-width: 1200px) {}
-
+  
+  @media (min-width: 576px) {
+    .tempaltemo-carousel .h1 { font-size: 1em !important;}
+    #noved .img-fluid, #deport .img-fluid, #peleas .img-fluid, #romanticos .img-fluid {height: 9rem !important;}
+    #noved h5, #deport h5, #peleas h5, #romanticos h5{font-size: 0.6rem !important;}
+    .bg-white{height: 20.5rem !important;}
+    .table-responsive{height: 16.5rem !important;}
+    .btn-orange{
+      height: 22px !important;
+      padding: 5px !important;
+      font-size: 0.6rem !important;
+      margin-top: -68px !important; 
+    }
+    .fw-bold{font-size: 1.15rem !important;}
+  }
+  
+    /* Estilos para pantallas medianas */
+  @media (min-width: 768px) {
+    #templatemo_main_nav .navbar-nav {max-width: 450px;}
+    #noved .img-fluid, #deport .img-fluid, #peleas .img-fluid, #romanticos .img-fluid {height: 11rem !important;}
+    #noved h5, #deport h5, #peleas h5, #romanticos h5{font-size: 0.85rem !important;}
+    .bg-white{height: 25rem !important;}
+    .table-responsive{height: 19rem !important;}
+    .btn-orange{
+      height: 29px !important;
+      padding: 3px !important;
+      font-size: 0.9rem !important;
+      margin-top: -20px !important; 
+    }
+    .fw-bold{font-size: 1.3rem !important;}
+   }
+  
+    /* Estilos para pantallas grandes */
+  @media (min-width: 992px) {
+    #templatemo_main_nav .navbar-nav {max-width: 550px;}
+    #template-mo-zay-hero-carousel .carousel-item {min-height: 30rem !important;}
+    .product-wap .h3, .product-wap li, .product-wap i, .product-wap p {font-size: 18px !important;}
+    .product-wap .product-color-dot {
+      width: 12px;
+      height: 12px;
+    }
+    #noved .img-fluid, #deport .img-fluid, #peleas .img-fluid, #romanticos .img-fluid { height: 17rem !important; }
+    #noved h5, #deport h5, #peleas h5, #romanticos h5 { font-size: 1.1rem !important; }
+    .bg-white{height: 32.5rem !important;}
+    .table-responsive{height: 25.5rem !important;}
+    .btn-orange{
+      height: 39px !important;
+      padding: 8px !important;
+    }
+    .fw-bold{font-size: 2rem !important;}
+  
+  }
+  
+    /* Estilos para pantallas muy grandes */
+  @media (min-width: 1200px) {}

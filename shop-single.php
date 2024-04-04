@@ -292,7 +292,7 @@
                                 <form action="" method="GET">
                                     <input type="hidden" name="product-title" value="Activewear">
                                     <div class="row">
-                                        <div class="col-6">
+                                        <div class="col-md-6 col-sm-12">
                                             <ul class="list-inline pb-3">
                                                 <li class="list-inline-item text-right">
                                                     Cantidad: 
@@ -307,7 +307,7 @@
                                                         id="btn-plus">+</span></li>
                                             </ul>
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-md-6 col-sm-12">
                                             <ul class="list-inline pb-3">
                                                 <li class="list-inline-item">Calidad:
                                                     <input type="hidden" name="product-size" id="product-size" value="S">
@@ -478,7 +478,7 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="js/validacionSuscripciones.js"></script>
     <script src="js/scroll.js"></script>
-    <script src="js/producto.js"></script>
+    <!-- <script src="js/producto.js"></script> -->
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
 

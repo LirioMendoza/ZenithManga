@@ -352,7 +352,7 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="js/validacionSuscripciones.js"></script>
     <script src="js/scroll.js"></script>
-    <script src="js/producto.js"></script>
+    <!-- <script src="js/producto.js"></script> -->
     <!-- End Script -->
 </body>
 
