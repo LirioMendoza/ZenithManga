@@ -86,7 +86,21 @@
     </nav>
     <!-- FIN Nav -->
 
-    <?php echo $_POST["id"]; ?>
+    <?php
+        include ("php/conexion.php");
+        if (isset($_POST["id"])) {
+            $id = $_POST["id"];
+            $sql = "SELECT id, nombre, descripcion, precio, calificacion, categoria FROM productos WHERE id = $id";
+        } else {
+            $sql = "SELECT id, nombre, descripcion, precio, calificacion, categoria FROM productos WHERE id = 1";
+        }
+        $result = $conn->query($sql);
+        $data = array();
+        while ($row = $result->fetch_assoc()) {
+            $data[] = $row;
+        }
+        $conn->close();
+    ?>
     <!-- Body principal -->
    <!-- Open Content -->
    <section class="bg-light">
@@ -94,7 +108,7 @@
             <div class="row">
                 <div class="col-lg-5 mt-5">
                     <div class="card mb-3">
-                        <img class="card-img img-fluid" src="assets/img/product_single_10.jpg" alt="Card image cap"
+                        <img class="card-img img-fluid" src="img/carrusel/fondo.jpg" alt="Card image cap"
                             id="product-detail">
                     </div>
                     <div class="row">
@@ -117,19 +131,19 @@
                                     <div class="row">
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="assets/img/product_single_01.jpg"
+                                                <img class="card-img img-fluid" src="img/carrusel/fondo2.gif"
                                                     alt="Product Image 1">
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="assets/img/product_single_02.jpg"
+                                                <img class="card-img img-fluid" src="img/carrusel/fondo.jpg"
                                                     alt="Product Image 2">
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="assets/img/product_single_03.jpg"
+                                                <img class="card-img img-fluid" src="img/carrusel/fondo.jpg"
                                                     alt="Product Image 3">
                                             </a>
                                         </div>
@@ -142,19 +156,19 @@
                                     <div class="row">
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="assets/img/product_single_04.jpg"
+                                                <img class="card-img img-fluid" src="img/carrusel/fondo.jpg"
                                                     alt="Product Image 4">
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="assets/img/product_single_05.jpg"
+                                                <img class="card-img img-fluid" src="img/carrusel/fondo.jpg"
                                                     alt="Product Image 5">
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="assets/img/product_single_06.jpg"
+                                                <img class="card-img img-fluid" src="img/carrusel/fondo.jpg"
                                                     alt="Product Image 6">
                                             </a>
                                         </div>
@@ -167,19 +181,19 @@
                                     <div class="row">
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="assets/img/product_single_07.jpg"
+                                                <img class="card-img img-fluid" src="img/carrusel/fondo.jpg"
                                                     alt="Product Image 7">
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="assets/img/product_single_08.jpg"
+                                                <img class="card-img img-fluid" src="img/carrusel/fondo.jpg"
                                                     alt="Product Image 8">
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="assets/img/product_single_09.jpg"
+                                                <img class="card-img img-fluid" src="img/carrusel/fondo.jpg"
                                                     alt="Product Image 9">
                                             </a>
                                         </div>
@@ -201,103 +215,107 @@
                     </div>
                 </div>
                 <!-- col end -->
-                <div class="col-lg-7 mt-5">
-                    <div class="card">
-                        <div class="card-body">
-                            <h1 class="h2">Active Wear</h1>
-                            <p class="h3 py-2">$25.00</p>
-                            <p class="py-2">
-                                <i class="fa fa-star text-warning"></i>
-                                <i class="fa fa-star text-warning"></i>
-                                <i class="fa fa-star text-warning"></i>
-                                <i class="fa fa-star text-warning"></i>
-                                <i class="fa fa-star text-secondary"></i>
-                                <span class="list-inline-item text-dark">Rating 4.8 | 36 Comments</span>
-                            </p>
-                            <ul class="list-inline">
-                                <li class="list-inline-item">
-                                    <h6>Brand:</h6>
-                                </li>
-                                <li class="list-inline-item">
-                                    <p class="text-muted"><strong>Easy Wear</strong></p>
-                                </li>
-                            </ul>
+                <?php foreach ($data as $key => $value) {  ?>
+                    <div class="col-lg-7 mt-5">
+                        <div class="card">
+                            <div class="card-body">
+                                <h1 style="color: red" ><strong><?php echo $value["nombre"]; ?></strong></h1>
+                                <p class="py-2"><strong>$<?php echo $value["precio"] * 17; ?> MXN</strong></p>
+                                <p class="py-2">
+                                <?php for ($i = 0; $i < $value['calificacion']; $i++) { ?>
+                                    <i class="fa fa-star text-warning"></i>
+                                <?php } ?>
+                                <?php for ($i = $value['calificacion']; $i < 5; $i++) { ?>
+                                    <i class="fa fa-star text-secondary"></i>
+                                <?php } ?>
+                                    
+                                    <span class="list-inline-item text-dark">Rating 4.8 | 36 Comments</span>
+                                </p>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <h4 style="color: red">Brand:</h4 style="color: red">
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <p class="text-muted"><strong>Easy Wear</strong></p>
+                                    </li>
+                                </ul>
 
-                            <h6>Description:</h6>
-                            <p>El manga es un cómic japonés caracterizado por su estilo artístico, narrativa y formato.
-                                Se distingue por sus líneas finas, ojos grandes, onomatopeyas llamativas y una amplia
-                                variedad de géneros, desde romance hasta ciencia ficción. Se lee de derecha a izquierda,
-                                con diálogos en globos y narración para explicar el contexto. Se publica en páginas
-                                sueltas, generalmente en blanco y negro, y luego se recopila en volúmenes. </p>
-                            <ul class="list-inline">
-                                <li class="list-inline-item">
-                                    <h6>Avaliable Color :</h6>
-                                </li>
-                                <li class="list-inline-item">
-                                    <p class="text-muted"><strong>White / Black</strong></p>
-                                </li>
-                            </ul>
+                                <h4 style="color: red">Description:</h4 style="color: red">
+                                <p>El manga es un cómic japonés caracterizado por su estilo artístico, narrativa y formato.
+                                    Se distingue por sus líneas finas, ojos grandes, onomatopeyas llamativas y una amplia
+                                    variedad de géneros, desde romance hasta ciencia ficción. Se lee de derecha a izquierda,
+                                    con diálogos en globos y narración para explicar el contexto. Se publica en páginas
+                                    sueltas, generalmente en blanco y negro, y luego se recopila en volúmenes. </p>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <h4 style="color: red">Avaliable Color :</h4 style="color: red">
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <p class="text-muted"><strong>White / Black</strong></p>
+                                    </li>
+                                </ul>
 
-                            <h6>Specification:</h6>
-                            <ul class="list-unstyled pb-3">
-                                <li>Lorem ipsum dolor sit</li>
-                                <li>Amet, consectetur</li>
-                                <li>Adipiscing elit,set</li>
-                                <li>Duis aute irure</li>
-                                <li>Ut enim ad minim</li>
-                                <li>Dolore magna aliqua</li>
-                                <li>Excepteur sint</li>
-                            </ul>
+                                <h4 style="color: red">Specification:</h4 style="color: red">
+                                <ul class="list-unstyled pb-3">
+                                    <li>Lorem ipsum dolor sit</li>
+                                    <li>Amet, consectetur</li>
+                                    <li>Adipiscing elit,set</li>
+                                    <li>Duis aute irure</li>
+                                    <li>Ut enim ad minim</li>
+                                    <li>Dolore magna aliqua</li>
+                                    <li>Excepteur sint</li>
+                                </ul>
 
-                            <form action="" method="GET">
-                                <input type="hidden" name="product-title" value="Activewear">
-                                <div class="row">
-                                    <div class="col-auto">
-                                        <ul class="list-inline pb-3">
-                                            <li class="list-inline-item">Size :
-                                                <input type="hidden" name="product-size" id="product-size" value="S">
-                                            </li>
-                                            <li class="list-inline-item"><span class="btn btn-success btn-size">S</span>
-                                            </li>
-                                            <li class="list-inline-item"><span class="btn btn-success btn-size">M</span>
-                                            </li>
-                                            <li class="list-inline-item"><span class="btn btn-success btn-size">L</span>
-                                            </li>
-                                            <li class="list-inline-item"><span
-                                                    class="btn btn-success btn-size">XL</span></li>
-                                        </ul>
+                                <form action="" method="GET">
+                                    <input type="hidden" name="product-title" value="Activewear">
+                                    <div class="row">
+                                        <div class="col-auto">
+                                            <ul class="list-inline pb-3">
+                                                <li class="list-inline-item">Size :
+                                                    <input type="hidden" name="product-size" id="product-size" value="S">
+                                                </li>
+                                                <li class="list-inline-item"><span class="btn btn-success btn-size">S</span>
+                                                </li>
+                                                <li class="list-inline-item"><span class="btn btn-success btn-size">M</span>
+                                                </li>
+                                                <li class="list-inline-item"><span class="btn btn-success btn-size">L</span>
+                                                </li>
+                                                <li class="list-inline-item"><span
+                                                        class="btn btn-success btn-size">XL</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-auto">
+                                            <ul class="list-inline pb-3">
+                                                <li class="list-inline-item text-right">
+                                                    Quantity
+                                                    <input type="hidden" name="product-quanity" id="product-quanity"
+                                                        value="1">
+                                                </li>
+                                                <li class="list-inline-item"><span class="btn btn-success"
+                                                        id="btn-minus">-</span></li>
+                                                <li class="list-inline-item"><span class="badge bg-secondary"
+                                                        id="var-value">1</span></li>
+                                                <li class="list-inline-item"><span class="btn btn-success"
+                                                        id="btn-plus">+</span></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="col-auto">
-                                        <ul class="list-inline pb-3">
-                                            <li class="list-inline-item text-right">
-                                                Quantity
-                                                <input type="hidden" name="product-quanity" id="product-quanity"
-                                                    value="1">
-                                            </li>
-                                            <li class="list-inline-item"><span class="btn btn-success"
-                                                    id="btn-minus">-</span></li>
-                                            <li class="list-inline-item"><span class="badge bg-secondary"
-                                                    id="var-value">1</span></li>
-                                            <li class="list-inline-item"><span class="btn btn-success"
-                                                    id="btn-plus">+</span></li>
-                                        </ul>
+                                    <div class="row pb-3">
+                                        <div class="col d-grid">
+                                            <button type="submit" class="btn-success btn-lg" name="submit"
+                                                value="buy">Buy</button>
+                                        </div>
+                                        <div class="col d-grid">
+                                            <button type="submit" class="btn-success btn-lg" name="submit"
+                                                value="addtocard">Add To Cart</button>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row pb-3">
-                                    <div class="col d-grid">
-                                        <button type="submit" class="btn-success btn-lg" name="submit"
-                                            value="buy">Buy</button>
-                                    </div>
-                                    <div class="col d-grid">
-                                        <button type="submit" class="btn-success btn-lg" name="submit"
-                                            value="addtocard">Add To Cart</button>
-                                    </div>
-                                </div>
-                            </form>
+                                </form>
 
+                            </div>
                         </div>
                     </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </section>
@@ -314,7 +332,7 @@
             <div class="row">
                 <!-- Datos de la empresa -->
                 <div class="col-md-4 pt-5">
-                    <h2 class="h2 text-warning border-bottom pb-3 border-light logo">Zenith Manga</h2>
+                    <h4 style="color: red" class="h4 style="color: red" text-warning border-bottom pb-3 border-light logo">Zenith Manga</h4 style="color: red">
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>
@@ -337,7 +355,7 @@
 
                 <!-- Links de la pagina -->
                 <div class="col-md-4 pt-5">
-                    <h2 class="h2 text-light border-bottom pb-3 border-light">Nosotros</h2>
+                    <h4 style="color: red" class="h4 style="color: red" text-light border-bottom pb-3 border-light">Nosotros</h4 style="color: red">
                     <ul class="list-unstyled text-light footer-link-list">
                         <li><i class="fa fa-arrow-right fa-fw"></i><a class="text-decoration-none" href="index.html">
                                 Inicio</a></li>
@@ -354,7 +372,7 @@
 
                 <!-- Autores de la empresa -->
                 <div class="col-md-4 pt-5">
-                    <h2 class="h2 text-light border-bottom pb-3 border-light">Autores</h2>
+                    <h4 style="color: red" class="h4 style="color: red" text-light border-bottom pb-3 border-light">Autores</h4 style="color: red">
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fa fa-user fa-fw"></i>
@@ -434,6 +452,9 @@
     <script src="js/validacionSuscripciones.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/producto.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+    <script src="assets/js/custom.js"></script>
+
     <!-- End Script -->
 </body>
 

@@ -115,7 +115,7 @@
                 <button type="submit" class="btn btn-success">Buscar</button>
             </form>
             <?php
-           include ("php/conexion.php");
+            include ("php/conexion.php");
             if (isset($_GET['search'])) {
                 $categoria = isset($_GET['categoria']) ? $_GET['categoria'] : "";
                 $orden = isset($_GET['orden']) ? $_GET['orden'] : 'nombre_asc';
@@ -179,11 +179,10 @@
                                 <h6 class="card-subtitle mb-2 text-muted"><strong>$<?php echo $value['precio'] * 17; ?> MXN</strong></h6>
                             </div>
                             <div style="height: 10%;">
-                                
-                            <form action="shop-single.php" method="post">
-                                <input type="hidden" name="id" value="<?php $value['id'] ?>">
-                                <button class="btn btn-primary" type="submit">Ver más</button>
-                            </form>
+                                <form action="shop-single.php" method="post" id="verMasForm">
+                                    <input type="hidden" name="id" value="<?php echo $value['id']; ?>">
+                                    <button type="submit" class="btn btn-primary">Ver más</button>
+                                </form>
                             </div>
                             <div class="card-rating" style="height: 15%; display: flex; justify-content: flex-end;">
                                 <?php for ($i = 0; $i < $value['calificacion']; $i++) { ?>

@@ -47,6 +47,9 @@ body, ul, li, p, a, label, input, div {
 .btn-success {
   background-color: #ff0000 !important;
 }
+.btn-success:hover{
+  background-color: #be0000 !important;
+}
 
 /* Estilos del Nav */
 #templatemo_nav_top { min-height: 50px;}
