@@ -1,19 +1,29 @@
 /* Estilos generales */
-body, ul, li, p, a, label, input, div {
+body,
+ul,
+li,
+p,
+a,
+label,
+input,
+div {
   font-family: 'Roboto', sans-serif;
   font-size: 18px !important;
   font-weight: 300 !important;
 }
+
 .h1 {
   font-family: 'Roboto', sans-serif;
   font-size: 48px !important;
   font-weight: 200 !important;
 }
+
 .h2 {
   font-family: 'Roboto', sans-serif;
   font-size: 30px !important;
   font-weight: 300;
 }
+
 .h3 {
   font-family: 'Roboto', sans-serif;
   font-size: 22px !important;
@@ -21,49 +31,59 @@ body, ul, li, p, a, label, input, div {
 
 /* Estilos del contenedor blanco */
 .bg-white {
-  margin: 0 10px; 
+  margin: 0 10px;
 }
 
 /* Estilos de los bordes del contenedor */
 .border {
-  border: 1px solid #ddd; 
+  border: 1px solid #ddd;
 }
 
 /* Estilos de la tabla */
 .table {
-  width: 100%; 
+  width: 100%;
 }
 
 /* Estilos de las imágenes */
 .img-fluid {
-  max-width: 100%; 
+  max-width: 100%;
 }
 
 
 /* Estilos para el borde inferior del título */
 .border-bottom {
-  border-bottom: 10px solid red; /* Borde inferior rojo y más grueso */
-  padding-bottom: 0px; /* Espacio entre el borde y el texto */
-  display: inline-block; /* Mostrar como bloque en línea */
+  border-bottom: 10px solid red;
+  /* Borde inferior rojo y más grueso */
+  padding-bottom: 0px;
+  /* Espacio entre el borde y el texto */
+  display: inline-block;
+  /* Mostrar como bloque en línea */
 }
 
 /* Estilos para el texto de la tabla */
 .table td {
-  vertical-align: middle; /* Centrar contenido verticalmente */
+  vertical-align: middle;
+  /* Centrar contenido verticalmente */
 }
 
 /* Estilos para el título de cada celda */
 h5 {
-  margin-top: 10px; /* Espacio superior */
-  margin-bottom: 5px; /* Espacio inferior */
+  margin-top: 10px;
+  /* Espacio superior */
+  margin-bottom: 5px;
+  /* Espacio inferior */
 }
 
 /* Estilos para el botón "Ver más" */
 .btn-orange {
-  background-color: red; /* Color de fondo naranja */
-  color: white; /* Color de texto blanco */
-  border: none; /* Sin borde */
-  padding: 10px 20px; /* Padding interno */
+  background-color: red;
+  /* Color de fondo naranja */
+  color: white;
+  /* Color de texto blanco */
+  border: none;
+  /* Sin borde */
+  padding: 10px 20px;
+  /* Padding interno */
 }
 
 /* Estilos para posicionar el botón en la esquina inferior izquierda */
@@ -71,160 +91,321 @@ h5 {
   position: absolute;
   bottom: 0;
   left: 0;
-  margin: 10px; /* Margen exterior */
+  margin: 10px;
+  /* Margen exterior */
 }
 
 /* Estilos de logo */
-.logo { font-weight: 500 !important;}
+.logo {
+  font-weight: 500 !important;
+}
 
 .scroll-to-top {
-    position: fixed; 
-    bottom: 20px;
-    right: 20px;
-    z-index: 100;
-    transition: all 0.3s ease-in-out;
-    border-radius: 40%;
-    background-color: hsl(62, 100%, 50%);
-    color: #000000;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
+  border-radius: 40%;
+  background-color: hsl(62, 100%, 50%);
+  color: #000000;
 }
 
 .scroll-to-top:hover {
-    background-color: hsl(0, 100%, 50%);
-    color: #000000;
+  background-color: hsl(0, 100%, 50%);
+  color: #000000;
 }
 
 /* Estilos de texto y fondo */
-.text-warning {  color: #ff0000 !important;}
-.bg-dark { background-color: #000000 !important;}
-.bg-black { background-color: #1d242d !important;}
+.text-warning {
+  color: #ff0000 !important;
+}
+
+.bg-dark {
+  background-color: #000000 !important;
+}
+
+.bg-black {
+  background-color: #1d242d !important;
+}
 
 /* Estilos de botones */
 .btn-success {
   background-color: #e40000 !important;
 }
-.btn-success:hover{
+
+.btn-success:hover {
   background-color: #4f0000 !important;
 }
 
 /* Estilos del Nav */
-#templatemo_nav_top { min-height: 50px;}
-#templatemo_nav_top * { font-size: .94em !important; margin-top: 2px;}
-#templatemo_main_nav a { color: #212934;}
-#templatemo_main_nav a:hover { color: #ff0000; border-bottom: solid 3px #ff0000; transition: transform 250ms ease-in-out;}
-#templatemo_main_nav .navbar .nav-icon { margin-right: 20px;}
+#templatemo_nav_top {
+  min-height: 50px;
+}
+
+#templatemo_nav_top * {
+  font-size: .94em !important;
+  margin-top: 2px;
+}
+
+#templatemo_main_nav a {
+  color: #212934;
+}
+
+#templatemo_main_nav a:hover {
+  color: #ff0000;
+  border-bottom: solid 3px #ff0000;
+  transition: transform 250ms ease-in-out;
+}
+
+#templatemo_main_nav .navbar .nav-icon {
+  margin-right: 20px;
+}
 
 /* Estilos del carousel */
-  /* Fondo */
-#template-mo-zay-hero-carousel { background-image: url('../../img/carrusel/fondo2.gif'); background-repeat: no-repeat; background-size: cover; background-position: center center; opacity: 0.85;}
-  /* Botones sig. ant. */
-#carousel-related-product .slick-slide:focus { outline: none !important;}
+/* Fondo */
+#template-mo-zay-hero-carousel {
+  background-image: url('../../img/carrusel/fondo2.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0.85;
+}
+
+/* Botones sig. ant. */
+#carousel-related-product .slick-slide:focus {
+  outline: none !important;
+}
+
 #carousel-related-product .slick-dots li button:before {
   font-size: 15px;
   margin-top: 20px;
 }
+
 #template-mo-zay-hero-carousel .carousel-control-next i,
 #template-mo-zay-hero-carousel .carousel-control-prev i {
   color: #ff0000 !important;
   font-size: 2.8em !important;
 }
-  /* Estado actual */
+
+/* Estado actual */
 #template-mo-zay-hero-carousel .carousel-indicators li {
   margin-top: -50px;
   background-color: #ff0000;
 }
 
 /* Estilos del Footer */
-#tempaltemo_footer a { color: #dcdde1;}
-#tempaltemo_footer a:hover { color: #ff0000; border-bottom: solid 3px #ff000058; transition: transform 250ms ease-in-out;}
-#tempaltemo_footer ul.footer-link-list li { padding-top: 10px;}
+#tempaltemo_footer a {
+  color: #dcdde1;
+}
+
+#tempaltemo_footer a:hover {
+  color: #ff0000;
+  border-bottom: solid 3px #ff000058;
+  transition: transform 250ms ease-in-out;
+}
+
+#tempaltemo_footer ul.footer-link-list li {
+  padding-top: 10px;
+}
+
 #tempaltemo_footer ul.footer-icons li {
   width: 2.6em;
   height: 2.6em;
   line-height: 2.6em;
 }
+
 #tempaltemo_footer ul.footer-icons li:hover {
   background-color: #cfd6e1;
   transition: .5s;
 }
+
 #tempaltemo_footer ul.footer-icons li:hover i {
   color: #212934;
   transition: .5s;
 }
-#tempaltemo_footer .border-light { border-color: #2d343f !important;}
+
+#tempaltemo_footer .border-light {
+  border-color: #2d343f !important;
+}
 
 
 
 /* Estilos para responsividad */
-  /* Estilos para pantallas chicas */
-  @media (min-width: 150px) {
-    .tempaltemo-carousel .h1 { font-size: 1em !important;}
-    #noved .img-fluid, #deport .img-fluid, #peleas .img-fluid, #romanticos .img-fluid {height: 7rem !important;}
-    #noved h5, #deport h5, #peleas h5, #romanticos h5{font-size: 0.5rem !important;}
-    .bg-white{height: 19rem !important;}
-    .table-responsive{height: 16.5rem !important;}
-    .btn-orange{
-      height: 19px !important;
-      padding: 5px !important;
-      font-size: 0.5rem !important;
-      margin-top: -118px !important; 
-    }
-    .fw-bold{
-      margin-bottom: -12px !important;
-      font-size: 0.95rem !important;
-    }
+/* Estilos para pantallas chicas */
+@media (min-width: 150px) {
+  .tempaltemo-carousel .h1 {
+    font-size: 1em !important;
   }
-  
-  @media (min-width: 576px) {
-    .tempaltemo-carousel .h1 { font-size: 1em !important;}
-    #noved .img-fluid, #deport .img-fluid, #peleas .img-fluid, #romanticos .img-fluid {height: 9rem !important;}
-    #noved h5, #deport h5, #peleas h5, #romanticos h5{font-size: 0.6rem !important;}
-    .bg-white{height: 20.5rem !important;}
-    .table-responsive{height: 16.5rem !important;}
-    .btn-orange{
-      height: 22px !important;
-      padding: 5px !important;
-      font-size: 0.6rem !important;
-      margin-top: -68px !important; 
-    }
-    .fw-bold{font-size: 1.15rem !important;}
+
+  #noved .img-fluid,
+  #deport .img-fluid,
+  #peleas .img-fluid,
+  #romanticos .img-fluid {
+    height: 7rem !important;
   }
-  
-    /* Estilos para pantallas medianas */
-  @media (min-width: 768px) {
-    #templatemo_main_nav .navbar-nav {max-width: 450px;}
-    #noved .img-fluid, #deport .img-fluid, #peleas .img-fluid, #romanticos .img-fluid {height: 11rem !important;}
-    #noved h5, #deport h5, #peleas h5, #romanticos h5{font-size: 0.85rem !important;}
-    .bg-white{height: 25rem !important;}
-    .table-responsive{height: 19rem !important;}
-    .btn-orange{
-      height: 29px !important;
-      padding: 3px !important;
-      font-size: 0.9rem !important;
-      margin-top: -20px !important; 
-    }
-    .fw-bold{font-size: 1.3rem !important;}
-   }
-  
-    /* Estilos para pantallas grandes */
-  @media (min-width: 992px) {
-    #templatemo_main_nav .navbar-nav {max-width: 550px;}
-    #template-mo-zay-hero-carousel .carousel-item {min-height: 30rem !important;}
-    .product-wap .h3, .product-wap li, .product-wap i, .product-wap p {font-size: 18px !important;}
-    .product-wap .product-color-dot {
-      width: 12px;
-      height: 12px;
-    }
-    #noved .img-fluid, #deport .img-fluid, #peleas .img-fluid, #romanticos .img-fluid { height: 17rem !important; }
-    #noved h5, #deport h5, #peleas h5, #romanticos h5 { font-size: 1.1rem !important; }
-    .bg-white{height: 32.5rem !important;}
-    .table-responsive{height: 25.5rem !important;}
-    .btn-orange{
-      height: 39px !important;
-      padding: 8px !important;
-    }
-    .fw-bold{font-size: 2rem !important;}
-  
+
+  #noved h5,
+  #deport h5,
+  #peleas h5,
+  #romanticos h5 {
+    font-size: 0.5rem !important;
   }
-  
-    /* Estilos para pantallas muy grandes */
-  @media (min-width: 1200px) {}
+
+  .bg-white {
+    height: 19rem !important;
+  }
+
+  .table-responsive {
+    height: 16.5rem !important;
+  }
+
+  .btn-orange {
+    height: 19px !important;
+    padding: 5px !important;
+    font-size: 0.5rem !important;
+    margin-top: -118px !important;
+  }
+
+  .fw-bold {
+    margin-bottom: -12px !important;
+    font-size: 0.95rem !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .tempaltemo-carousel .h1 {
+    font-size: 1em !important;
+  }
+
+  #noved .img-fluid,
+  #deport .img-fluid,
+  #peleas .img-fluid,
+  #romanticos .img-fluid {
+    height: 9rem !important;
+  }
+
+  #noved h5,
+  #deport h5,
+  #peleas h5,
+  #romanticos h5 {
+    font-size: 0.6rem !important;
+  }
+
+  .bg-white {
+    height: 20.5rem !important;
+  }
+
+  .table-responsive {
+    height: 16.5rem !important;
+  }
+
+  .btn-orange {
+    height: 22px !important;
+    padding: 5px !important;
+    font-size: 0.6rem !important;
+    margin-top: -68px !important;
+  }
+
+  .fw-bold {
+    font-size: 1.15rem !important;
+  }
+}
+
+/* Estilos para pantallas medianas */
+@media (min-width: 768px) {
+  #templatemo_main_nav .navbar-nav {
+    max-width: 450px;
+  }
+
+  #noved .img-fluid,
+  #deport .img-fluid,
+  #peleas .img-fluid,
+  #romanticos .img-fluid {
+    height: 11rem !important;
+  }
+
+  #noved h5,
+  #deport h5,
+  #peleas h5,
+  #romanticos h5 {
+    font-size: 0.85rem !important;
+  }
+
+  .bg-white {
+    height: 25rem !important;
+  }
+
+  .table-responsive {
+    height: 19rem !important;
+  }
+
+  .btn-orange {
+    height: 29px !important;
+    padding: 3px !important;
+    font-size: 0.9rem !important;
+    margin-top: -20px !important;
+  }
+
+  .fw-bold {
+    font-size: 1.3rem !important;
+  }
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 992px) {
+  #templatemo_main_nav .navbar-nav {
+    max-width: 550px;
+  }
+
+  #template-mo-zay-hero-carousel .carousel-item {
+    min-height: 30rem !important;
+  }
+
+  .product-wap .h3,
+  .product-wap li,
+  .product-wap i,
+  .product-wap p {
+    font-size: 18px !important;
+  }
+
+  .product-wap .product-color-dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  #noved .img-fluid,
+  #deport .img-fluid,
+  #peleas .img-fluid,
+  #romanticos .img-fluid {
+    height: 17rem !important;
+  }
+
+  #noved h5,
+  #deport h5,
+  #peleas h5,
+  #romanticos h5 {
+    font-size: 1.1rem !important;
+  }
+
+  .bg-white {
+    height: 32.5rem !important;
+  }
+
+  .table-responsive {
+    height: 25.5rem !important;
+  }
+
+  .btn-orange {
+    height: 39px !important;
+    padding: 8px !important;
+  }
+
+  .fw-bold {
+    font-size: 2rem !important;
+  }
+
+}
+
+/* Estilos para pantallas muy grandes */
+@media (min-width: 1200px) {}

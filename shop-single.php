@@ -114,23 +114,34 @@
     ?>
     <!-- Body principal -->
     <!-- Open Content -->
+    <?php
+    $id = $_POST["id"] % 20;
+    if ($id == 0) {
+        $id = 1;
+    }
+    $imagen = "img/shop/Extras/" . $id . ".png";
+    if (!file_exists($imagen)) {
+        $imagen = "img/shop/Products/error.jpg";
+    }
+    ?>
     <section class="bg-light">
         <div class="container pb-5">
             <div class="row">
                 <div class="col-lg-5 mt-5">
                     <div class="card mb-3">
-                        <img class="card-img img-fluid" src="img/carrusel/fondo.jpg" alt="Card image cap"
-                            id="product-detail">
+                        <img class="card-img img-fluid" src="<?php echo $imagen; ?>" alt="Card image cap"
+                            id="product-detail" style="scale: 95%">
                     </div>
                     <div class="row">
                         <!--Start Controls-->
                         <div class="col-1 align-self-center">
                             <a href="#multi-item-example" role="button" data-bs-slide="prev">
                                 <i class="text-dark fas fa-chevron-left"></i>
-                                <span class="sr-only">Previous</span>
+                                <span class="sr-only"></span>
                             </a>
                         </div>
                         <!--End Controls-->
+
                         <!--Start Carousel Wrapper-->
                         <div id="multi-item-example" class="col-10 carousel slide carousel-multi-item"
                             data-bs-ride="carousel">
@@ -142,19 +153,40 @@
                                     <div class="row">
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="img/carrusel/fondo2.gif"
+                                                <?php
+                                                $id = ($id * 17) % 20;
+                                                if ($id == 0) {
+                                                    $id = 1;
+                                                }
+                                                $imagen = "img/shop/Extras/" . $id . ".png";
+                                                ?>
+                                                <img class="card-img img-fluid" src="<?php echo $imagen; ?>"
                                                     alt="Product Image 1">
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="img/carrusel/fondo.jpg"
+                                                <?php
+                                                $id = ($id * 17) % 20;
+                                                if ($id == 0) {
+                                                    $id = 1;
+                                                }
+                                                $imagen = "img/shop/Extras/" . $id . ".png";
+                                                ?>
+                                                <img class="card-img img-fluid" src="<?php echo $imagen; ?>"
                                                     alt="Product Image 2">
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="img/carrusel/fondo.jpg"
+                                                <?php
+                                                $id = ($id * 17) % 20;
+                                                if ($id == 0) {
+                                                    $id = 1;
+                                                }
+                                                $imagen = "img/shop/Extras/" . $id . ".png";
+                                                ?>
+                                                <img class="card-img img-fluid" src="<?php echo $imagen; ?>"
                                                     alt="Product Image 3">
                                             </a>
                                         </div>
@@ -167,19 +199,40 @@
                                     <div class="row">
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="img/carrusel/fondo.jpg"
+                                                <?php
+                                                $id = ($id * 17) % 20;
+                                                if ($id == 0) {
+                                                    $id = 1;
+                                                }
+                                                $imagen = "img/shop/Extras/" . $id . ".png";
+                                                ?>
+                                                <img class="card-img img-fluid" src="<?php echo $imagen; ?>"
                                                     alt="Product Image 4">
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="img/carrusel/fondo.jpg"
+                                                <?php
+                                                $id = ($id * 17) % 20;
+                                                if ($id == 0) {
+                                                    $id = 1;
+                                                }
+                                                $imagen = "img/shop/Extras/" . $id . ".png";
+                                                ?>
+                                                <img class="card-img img-fluid" src="<?php echo $imagen; ?>"
                                                     alt="Product Image 5">
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="img/carrusel/fondo.jpg"
+                                                <?php
+                                                $id = ($id * 17) % 20;
+                                                if ($id == 0) {
+                                                    $id = 1;
+                                                }
+                                                $imagen = "img/shop/Extras/" . $id . ".png";
+                                                ?>
+                                                <img class="card-img img-fluid" src="<?php echo $imagen; ?>"
                                                     alt="Product Image 6">
                                             </a>
                                         </div>
@@ -192,19 +245,40 @@
                                     <div class="row">
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="img/carrusel/fondo.jpg"
+                                                <?php
+                                                $id = ($id * 17) % 20;
+                                                if ($id == 0) {
+                                                    $id = 1;
+                                                }
+                                                $imagen = "img/shop/Extras/" . $id . ".png";
+                                                ?>
+                                                <img class="card-img img-fluid" src="<?php echo $imagen; ?>"
                                                     alt="Product Image 7">
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="img/carrusel/fondo.jpg"
+                                                <?php
+                                                $id = ($id * 17) % 20;
+                                                if ($id == 0) {
+                                                    $id = 1;
+                                                }
+                                                $imagen = "img/shop/Extras/" . $id . ".png";
+                                                ?>
+                                                <img class="card-img img-fluid" src="<?php echo $imagen; ?>"
                                                     alt="Product Image 8">
                                             </a>
                                         </div>
                                         <div class="col-4">
                                             <a href="#">
-                                                <img class="card-img img-fluid" src="img/carrusel/fondo.jpg"
+                                                <?php
+                                                $id = ($id * 17) % 20;
+                                                if ($id == 0) {
+                                                    $id = 1;
+                                                }
+                                                $imagen = "img/shop/Extras/" . $id . ".png";
+                                                ?>
+                                                <img class="card-img img-fluid" src="<?php echo $imagen; ?>"
                                                     alt="Product Image 9">
                                             </a>
                                         </div>
@@ -215,11 +289,12 @@
                             <!--End Slides-->
                         </div>
                         <!--End Carousel Wrapper-->
+
                         <!--Start Controls-->
                         <div class="col-1 align-self-center">
                             <a href="#multi-item-example" role="button" data-bs-slide="next">
                                 <i class="text-dark fas fa-chevron-right"></i>
-                                <span class="sr-only">Next</span>
+                                <span class="sr-only"></span>
                             </a>
                         </div>
                         <!--End Controls-->
@@ -233,7 +308,8 @@
                                 <h1 style="color: red"><strong>
                                         <?php echo $value["nombre"]; ?>
                                     </strong></h1>
-                                <p class="py-2"><strong>Precio: $<?php echo $value["precio"] * 17; ?> MXN
+                                <p class="py-2"><strong>Precio: $
+                                        <?php echo $value["precio"] * 17; ?> MXN
                                     </strong></p>
                                 <p class="py-2">
                                     <?php for ($i = 0; $i < $value['calificacion']; $i++) { ?>
@@ -274,7 +350,9 @@
                                         <h5 style="color: red">Disponiblres en Tienda:</h5>
                                     </li>
                                     <li class="list-inline-item">
-                                        <p class="text-muted"><strong><?php echo $value["calificacion"] * 3; ?> piezas</strong></p>
+                                        <p class="text-muted"><strong>
+                                                <?php echo $value["calificacion"] * 3; ?> piezas
+                                            </strong></p>
                                     </li>
                                 </ul>
 
@@ -295,7 +373,7 @@
                                         <div class="col-md-6 col-sm-12">
                                             <ul class="list-inline pb-3">
                                                 <li class="list-inline-item text-right">
-                                                    Cantidad: 
+                                                    Cantidad:
                                                     <input type="hidden" name="product-quanity" id="product-quanity"
                                                         value="1">
                                                 </li>
@@ -312,9 +390,11 @@
                                                 <li class="list-inline-item">Calidad:
                                                     <input type="hidden" name="product-size" id="product-size" value="S">
                                                 </li>
-                                                <li class="list-inline-item"><span class="btn btn-success btn-size">Regular</span>
+                                                <li class="list-inline-item"><span
+                                                        class="btn btn-success btn-size">Regular</span>
                                                 </li>
-                                                <li class="list-inline-item"><span class="btn btn-success btn-size">Premium</span>
+                                                <li class="list-inline-item"><span
+                                                        class="btn btn-success btn-size">Premium</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -338,6 +418,7 @@
             </div>
         </div>
     </section>
+
     <!-- Close Content -->
 
 
