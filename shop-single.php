@@ -124,13 +124,16 @@
         $imagen = "img/shop/Products/error.jpg";
     }
     ?>
+    <div class="container pt-4" style="display: flex; justify-content: flex-end;">
+        <a href="shop.php"><button type="button" class="btn btn-danger">Volver</button></a>
+    </div>
     <section class="bg-light">
         <div class="container pb-5">
             <div class="row">
-                <div class="col-lg-5 mt-5">
+                <div class="col-lg-4 mt-4">
                     <div class="card mb-3">
                         <img class="card-img img-fluid" src="<?php echo $imagen; ?>" alt="Card image cap"
-                            id="product-detail" style="scale: 95%">
+                            id="product-detail">
                     </div>
                     <div class="row">
                         <!--Start Controls-->
@@ -302,13 +305,14 @@
                 </div>
                 <!-- col end -->
                 <?php foreach ($data as $key => $value) { ?>
-                    <div class="col-lg-7 mt-5">
+                    <div class="col-lg-8 mt-4">
                         <div class="card">
                             <div class="card-body" style="background-color: #f5f5f5;">
                                 <h1 style="color: red"><strong>
                                         <?php echo $value["nombre"]; ?>
                                     </strong></h1>
-                                <p class="py-2"><strong>Precio: $
+                                <p class="py-2"><strong>Precio:
+                                        $
                                         <?php echo $value["precio"] * 17; ?> MXN
                                     </strong></p>
                                 <p class="py-2">
@@ -401,12 +405,10 @@
                                     </div>
                                     <div class="row pb-3">
                                         <div class="col d-grid">
-                                            <button type="submit" class="btn-success btn-lg" name="submit"
-                                                value="buy">Buy</button>
+                                            <button class="btn-success btn-lg" disabled>Comprar</button>
                                         </div>
                                         <div class="col d-grid">
-                                            <button type="submit" class="btn-success btn-lg" name="submit"
-                                                value="addtocard">Add To Cart</button>
+                                            <button class="btn-success btn-lg" disabled>Añadir al carrito</button>
                                         </div>
                                     </div>
                                 </form>
