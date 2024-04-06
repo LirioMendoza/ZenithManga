@@ -101,7 +101,7 @@
 
     <div class="container-fluid bg-light py-5"
         style="background-image: url('img/carrusel/fondo.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-        <div class="container">
+        <div class="container col-lg-8 col-sm-12">
             <h1 style="color: red">Buscador de mangas</h1>
             <form action="#" method="get" class="search-form">
                 <div class="form-group">
