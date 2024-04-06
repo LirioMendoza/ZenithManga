@@ -97,6 +97,8 @@
     </nav>
     <!-- FIN Nav -->
 
+
+    <!-- Body principal -->
     <?php
     include ("php/conexion.php");
     if (isset($_POST["id"])) {
@@ -112,18 +114,6 @@
     }
     $conn->close();
     ?>
-    <!-- Body principal -->
-    <!-- Open Content -->
-    <?php
-    $id = $_POST["id"] % 20;
-    if ($id == 0) {
-        $id = 1;
-    }
-    $imagen = "img/shop/Extras/" . $id . ".png";
-    if (!file_exists($imagen)) {
-        $imagen = "img/shop/Products/error.jpg";
-    }
-    ?>
     <div class="container pt-4" style="display: flex; justify-content: flex-end;">
         <a href="shop.php"><button type="button" class="btn btn-danger">Volver</button></a>
     </div>
@@ -132,6 +122,16 @@
             <div class="row">
                 <div class="col-lg-4 mt-4">
                     <div class="card mb-3">
+                        <?php
+                        $id = $_POST["id"] % 20;
+                        if ($id == 0) {
+                            $id = 1;
+                        }
+                        $imagen = "img/shop/Extras/" . $id . ".png";
+                        if (!file_exists($imagen)) {
+                            $imagen = "img/shop/Products/error.jpg";
+                        }
+                        ?>
                         <img class="card-img img-fluid" src="<?php echo $imagen; ?>" alt="Card image cap"
                             id="product-detail">
                     </div>
@@ -311,10 +311,9 @@
                                 <h1 style="color: red"><strong>
                                         <?php echo $value["nombre"]; ?>
                                     </strong></h1>
-                                <p class="py-2"><strong>Precio:
-                                        $
-                                        <?php echo $value["precio"] * 17; ?> MXN
-                                    </strong></p>
+                                <h5 class="py-2"><strong style="color: #07D400">
+                                        $<?php echo $value["precio"] * 17; ?> MXN
+                                    </strong></h5>
                                 <p class="py-2">
                                     <?php for ($i = 0; $i < $value['calificacion']; $i++) { ?>
                                         <i class="fa fa-star text-warning"></i>
@@ -322,7 +321,6 @@
                                     <?php for ($i = $value['calificacion']; $i < 5; $i++) { ?>
                                         <i class="fa fa-star text-secondary"></i>
                                     <?php } ?>
-
                                     <span class="list-inline-item text-dark">Calificación: <strong>
                                             <?php echo $value["calificacion"]; ?>
                                         </strong> | Comentarios: <strong>
@@ -339,7 +337,6 @@
                                             </strong></p>
                                     </li>
                                 </ul>
-
                                 <h5 style="color: red">Descripción:</h5>
                                 <p style="text-align: justify;">
                                     <?php echo $value["descripcion"]; ?> El manga es un cómic japonés caracterizado por su
@@ -359,7 +356,6 @@
                                             </strong></p>
                                     </li>
                                 </ul>
-
                                 <h5 style="color: red">Especificaciones:</h5>
                                 <ul class="list-unstyled pb-3">
                                     <li>• Tamaño de página: B5 (210 x 297 mm).</li>
@@ -370,49 +366,43 @@
                                     <li>• Tipo de impresión: Offset o digital.</li>
                                     <li>• Calidad de impresión: Buena.</li>
                                 </ul>
-
-                                <form action="" method="GET">
-                                    <input type="hidden" name="product-title" value="Activewear">
-                                    <div class="row">
-                                        <div class="col-md-6 col-sm-12">
-                                            <ul class="list-inline pb-3">
-                                                <li class="list-inline-item text-right">
-                                                    Cantidad:
-                                                    <input type="hidden" name="product-quanity" id="product-quanity"
-                                                        value="1">
-                                                </li>
-                                                <li class="list-inline-item"><span class="btn btn-success"
-                                                        id="btn-minus">-</span></li>
-                                                <li class="list-inline-item"><span class="badge bg-secondary"
-                                                        id="var-value">1</span></li>
-                                                <li class="list-inline-item"><span class="btn btn-success"
-                                                        id="btn-plus">+</span></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-6 col-sm-12">
-                                            <ul class="list-inline pb-3">
-                                                <li class="list-inline-item">Calidad:
-                                                    <input type="hidden" name="product-size" id="product-size" value="S">
-                                                </li>
-                                                <li class="list-inline-item"><span
-                                                        class="btn btn-success btn-size">Regular</span>
-                                                </li>
-                                                <li class="list-inline-item"><span
-                                                        class="btn btn-success btn-size">Premium</span>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-12">
+                                        <ul class="list-inline pb-3">
+                                            <li class="list-inline-item text-right">
+                                                Cantidad:
+                                                <input type="hidden" name="product-quanity" id="product-quanity" value="1">
+                                            </li>
+                                            <li class="list-inline-item"><span class="btn btn-success"
+                                                    id="btn-minus">-</span></li>
+                                            <li class="list-inline-item"><span class="badge bg-secondary"
+                                                    id="var-value">1</span></li>
+                                            <li class="list-inline-item"><span class="btn btn-success"
+                                                    id="btn-plus">+</span></li>
+                                        </ul>
                                     </div>
-                                    <div class="row pb-3">
-                                        <div class="col d-grid">
-                                            <button class="btn-success btn-lg" disabled>Comprar</button>
-                                        </div>
-                                        <div class="col d-grid">
-                                            <button class="btn-success btn-lg" disabled>Añadir al carrito</button>
-                                        </div>
+                                    <div class="col-md-6 col-sm-12">
+                                        <ul class="list-inline pb-3">
+                                            <li class="list-inline-item">Calidad:
+                                                <input type="hidden" name="product-size" id="product-size" value="S">
+                                            </li>
+                                            <li class="list-inline-item"><span
+                                                    class="btn btn-success btn-size">Regular</span>
+                                            </li>
+                                            <li class="list-inline-item"><span
+                                                    class="btn btn-success btn-size">Premium</span>
+                                            </li>
+                                        </ul>
                                     </div>
-                                </form>
-
+                                </div>
+                                <div class="row pb-3">
+                                    <div class="col d-grid">
+                                        <button class="btn-success btn-lg" disabled>Comprar</button>
+                                    </div>
+                                    <div class="col d-grid">
+                                        <button class="btn-success btn-lg" disabled>Añadir al carrito</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -420,12 +410,7 @@
             </div>
         </div>
     </section>
-
-    <!-- Close Content -->
-
-
     <!-- FIN Body principal -->
-
 
 
     <!-- Footer -->
@@ -455,7 +440,6 @@
                         </li>
                     </ul>
                 </div>
-
                 <!-- Links de la pagina -->
                 <div class="col-md-4 pt-5">
                     <h5 style="color: red" class="h5 style=" color: red" text-light border-bottom pb-3 border-light">
@@ -473,7 +457,6 @@
                                 Contacto</a></li>
                     </ul>
                 </div>
-
                 <!-- Autores de la empresa -->
                 <div class="col-md-4 pt-5">
                     <h5 style="color: red" class="h5 style=" color: red" text-light border-bottom pb-3 border-light">
@@ -498,7 +481,6 @@
                     </ul>
                 </div>
             </div>
-
             <!-- Logos de redes sociales -->
             <div class="row text-light mb-4">
                 <div class="col-12 mb-3">
@@ -536,7 +518,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Derechos reservados -->
         <div class="w-100 bg-black py-3">
             <div class="container">
@@ -561,10 +542,8 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="js/validacionSuscripciones.js"></script>
     <script src="js/scroll.js"></script>
-    <!-- <script src="js/producto.js"></script> -->
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
-
     <!-- End Script -->
 </body>
 

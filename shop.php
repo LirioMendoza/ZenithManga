@@ -97,8 +97,8 @@
     </nav>
     <!-- FIN Nav -->
 
-    <!-- Body principal -->
 
+    <!-- Body principal -->
     <div class="container-fluid bg-light py-5"
         style="background-image: url('img/carrusel/fondo.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
         <div class="container col-lg-8 col-sm-12">
@@ -215,11 +215,7 @@
             <?php } ?>
         </div>
     </div>
-
-
-
     <!-- FIN Body principal -->
-
 
 
     <!-- Footer -->
@@ -248,7 +244,6 @@
                         </li>
                     </ul>
                 </div>
-
                 <!-- Links de la pagina -->
                 <div class="col-md-4 pt-5">
                     <h2 class="h2 text-light border-bottom pb-3 border-light">Nosotros</h2>
@@ -265,7 +260,6 @@
                                 Contacto</a></li>
                     </ul>
                 </div>
-
                 <!-- Autores de la empresa -->
                 <div class="col-md-4 pt-5">
                     <h2 class="h2 text-light border-bottom pb-3 border-light">Autores</h2>
@@ -289,7 +283,6 @@
                     </ul>
                 </div>
             </div>
-
             <!-- Logos de redes sociales -->
             <div class="row text-light mb-4">
                 <div class="col-12 mb-3">
@@ -327,7 +320,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Derechos reservados -->
         <div class="w-100 bg-black py-3">
             <div class="container">
@@ -352,85 +344,7 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="js/validacionSuscripciones.js"></script>
     <script src="js/scroll.js"></script>
-    <!-- <script src="js/producto.js"></script> -->
     <!-- End Script -->
 </body>
 
 </html>
-
-<style>
-    .container {
-        max-width: 80%;
-        margin: 0 auto;
-    }
-
-    .card {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        transition: 0.3s;
-        border-radius: 5px;
-        margin-bottom: 20px;
-    }
-
-    .card:hover {
-        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 1.0);
-    }
-
-    .card-img-top {
-        width: 100%;
-        border-radius: 5px 5px 0 0;
-    }
-
-    .card-body {
-        padding: 16px;
-        height: 100%;
-    }
-
-    .card-title {
-        margin-bottom: 10px;
-    }
-
-    .card-subtitle {
-        margin-top: 10px;
-    }
-
-    .btn-primary {
-        background-color: #007bff;
-        color: white;
-        border-color: #007bff;
-    }
-
-    .card-rating {
-        margin-top: 10px;
-        font-size: 16px;
-    }
-
-    .fa-star {
-        color: #FFD700;
-    }
-
-    .far fa-star {
-        color: #ddd;
-    }
-
-    @media (max-width: 768px) {
-        .col-sm-6 {
-            width: 100%;
-        }
-    }
-
-    @media (max-width: 576px) {
-        .card-img-top {
-            height: 150px;
-        }
-    }
-
-    .search-form {
-        display: flex;
-        flex-direction: column;
-        margin: 1rem auto;
-    }
-
-    .form-group {
-        margin-bottom: 1rem;
-    }
-</style>
