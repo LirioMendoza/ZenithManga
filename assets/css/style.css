@@ -264,9 +264,15 @@ textarea {
 }
 
 .btn-primary {
-  background-color: #007bff;
+  background-color: #c90b0b;
   color: white;
-  border-color: #007bff;
+  border-color: #c90b0b;
+}
+
+.btn-primary:hover {
+  background-color: #ff0000;
+  color: white;
+  border-color: #ff0000;
 }
 
 .card-rating {

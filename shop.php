@@ -127,7 +127,7 @@
                 <button type="submit" class="btn btn-success">Buscar</button>
             </form>
             <?php
-            include ("php/conexion.php");
+            include ("assets/php/conexion.php");
             if (isset($_GET['search'])) {
                 $categoria = isset($_GET['categoria']) ? $_GET['categoria'] : "";
                 $orden = isset($_GET['orden']) ? $_GET['orden'] : 'nombre_asc';
@@ -171,9 +171,9 @@
                     <div class="card" style="height: 100%;">
                         <?php
                         $id = $value['id'];
-                        $imagen = "img/shop/Products/" . $id . ".jpg";
+                        $imagen = "assets/img/shop/products/" . $id . ".jpg";
                         if (!file_exists($imagen)) {
-                            $imagen = "img/shop/Products/error.jpg";
+                            $imagen = "assets/img/shop/products/error.jpg";
                         }
                         ?>
                         <img src="<?php echo $imagen; ?>" alt="Card image cap" class="card-img-top" style="height: 150px;">
@@ -310,11 +310,11 @@
                 </div>
                 <div class="col-auto">
                     <div class="input-group mb-2">
-                        <form action="php/suscripcion.php" method="post" style="display: flex;" name="formulario">
+                        <form action="assets/php/suscripcion.php" method="post" style="display: flex;" name="formulario">
                             <input class="form-control bg-light border-light" type="email" name="correo" id="correo"
                                 placeholder="Correo electronico">
                             <input class="input-group-text btn-success text-light" type="submit" value="Suscribirse">
-                            <input type="hidden" name="redirect" value="../shop.html">
+                            <input type="hidden" name="redirect" value="../../shop.php">
                         </form>
                     </div>
                 </div>
@@ -342,8 +342,8 @@
     <!-- Start Script -->
     <script src="assets/js/jquery-1.11.0.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="js/validacionSuscripciones.js"></script>
-    <script src="js/scroll.js"></script>
+    <script src="assets/js/validacionSuscripciones.js"></script>
+    <script src="assets/js/scroll.js"></script>
     <!-- End Script -->
 </body>
 

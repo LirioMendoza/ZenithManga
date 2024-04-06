@@ -100,7 +100,7 @@
 
     <!-- Body principal -->
     <?php
-    include ("php/conexion.php");
+    include ("assets/php/conexion.php");
     if (isset($_POST["id"])) {
         $id = $_POST["id"];
         $sql = "SELECT id, nombre, descripcion, precio, calificacion, categoria FROM productos WHERE id = $id";
@@ -127,9 +127,9 @@
                         if ($id == 0) {
                             $id = 1;
                         }
-                        $imagen = "img/shop/Extras/" . $id . ".png";
+                        $imagen = "assets/img/shop/shop-single/" . $id . ".png";
                         if (!file_exists($imagen)) {
-                            $imagen = "img/shop/Products/error.jpg";
+                            $imagen = "assets/img/shop/Products/error.jpg";
                         }
                         ?>
                         <img class="card-img img-fluid" src="<?php echo $imagen; ?>" alt="Card image cap"
@@ -161,7 +161,7 @@
                                                 if ($id == 0) {
                                                     $id = 1;
                                                 }
-                                                $imagen = "img/shop/Extras/" . $id . ".png";
+                                                $imagen = "assets/img/shop/shop-single/" . $id . ".png";
                                                 ?>
                                                 <img class="card-img img-fluid" src="<?php echo $imagen; ?>"
                                                     alt="Product Image 1">
@@ -174,7 +174,7 @@
                                                 if ($id == 0) {
                                                     $id = 1;
                                                 }
-                                                $imagen = "img/shop/Extras/" . $id . ".png";
+                                                $imagen = "assets/img/shop/shop-single/" . $id . ".png";
                                                 ?>
                                                 <img class="card-img img-fluid" src="<?php echo $imagen; ?>"
                                                     alt="Product Image 2">
@@ -187,7 +187,7 @@
                                                 if ($id == 0) {
                                                     $id = 1;
                                                 }
-                                                $imagen = "img/shop/Extras/" . $id . ".png";
+                                                $imagen = "assets/img/shop/shop-single/" . $id . ".png";
                                                 ?>
                                                 <img class="card-img img-fluid" src="<?php echo $imagen; ?>"
                                                     alt="Product Image 3">
@@ -207,7 +207,7 @@
                                                 if ($id == 0) {
                                                     $id = 1;
                                                 }
-                                                $imagen = "img/shop/Extras/" . $id . ".png";
+                                                $imagen = "assets/img/shop/shop-single/" . $id . ".png";
                                                 ?>
                                                 <img class="card-img img-fluid" src="<?php echo $imagen; ?>"
                                                     alt="Product Image 4">
@@ -220,7 +220,7 @@
                                                 if ($id == 0) {
                                                     $id = 1;
                                                 }
-                                                $imagen = "img/shop/Extras/" . $id . ".png";
+                                                $imagen = "assets/img/shop/shop-single/" . $id . ".png";
                                                 ?>
                                                 <img class="card-img img-fluid" src="<?php echo $imagen; ?>"
                                                     alt="Product Image 5">
@@ -233,7 +233,7 @@
                                                 if ($id == 0) {
                                                     $id = 1;
                                                 }
-                                                $imagen = "img/shop/Extras/" . $id . ".png";
+                                                $imagen = "assets/img/shop/shop-single/" . $id . ".png";
                                                 ?>
                                                 <img class="card-img img-fluid" src="<?php echo $imagen; ?>"
                                                     alt="Product Image 6">
@@ -253,7 +253,7 @@
                                                 if ($id == 0) {
                                                     $id = 1;
                                                 }
-                                                $imagen = "img/shop/Extras/" . $id . ".png";
+                                                $imagen = "assets/img/shop/shop-single/" . $id . ".png";
                                                 ?>
                                                 <img class="card-img img-fluid" src="<?php echo $imagen; ?>"
                                                     alt="Product Image 7">
@@ -266,7 +266,7 @@
                                                 if ($id == 0) {
                                                     $id = 1;
                                                 }
-                                                $imagen = "img/shop/Extras/" . $id . ".png";
+                                                $imagen = "assets/img/shop/shop-single/" . $id . ".png";
                                                 ?>
                                                 <img class="card-img img-fluid" src="<?php echo $imagen; ?>"
                                                     alt="Product Image 8">
@@ -279,7 +279,7 @@
                                                 if ($id == 0) {
                                                     $id = 1;
                                                 }
-                                                $imagen = "img/shop/Extras/" . $id . ".png";
+                                                $imagen = "assets/img/shop/shop-single/" . $id . ".png";
                                                 ?>
                                                 <img class="card-img img-fluid" src="<?php echo $imagen; ?>"
                                                     alt="Product Image 9">
@@ -311,7 +311,7 @@
                                 <h1 style="color: red"><strong>
                                         <?php echo $value["nombre"]; ?>
                                     </strong></h1>
-                                <h5 class="py-2"><strong style="color: #07D400">
+                                <h5 class="py-2"><strong style="color: #339900">
                                         $<?php echo $value["precio"] * 17; ?> MXN
                                     </strong></h5>
                                 <p class="py-2">
@@ -419,8 +419,7 @@
             <div class="row">
                 <!-- Datos de la empresa -->
                 <div class="col-md-4 pt-5">
-                    <h5 style="color: red" class="h5 style=" color: red" text-warning border-bottom pb-3 border-light
-                        logo">Zenith Manga</h5>
+                    <h2 class="h2 text-warning border-bottom pb-3 border-light logo">Zenith Manga</h2>
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>
@@ -512,7 +511,7 @@
                             <input class="form-control bg-light border-light" type="email" name="correo" id="correo"
                                 placeholder="Correo electronico">
                             <input class="input-group-text btn-success text-light" type="submit" value="Suscribirse">
-                            <input type="hidden" name="redirect" value="../shop.html">
+                            <input type="hidden" name="redirect" value="../shop-single.php">
                         </form>
                     </div>
                 </div>
@@ -540,8 +539,8 @@
     <!-- Start Script -->
     <script src="assets/js/jquery-1.11.0.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="js/validacionSuscripciones.js"></script>
-    <script src="js/scroll.js"></script>
+    <script src="assets/js/validacionSuscripciones.js"></script>
+    <script src="assets/js/scroll.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
     <!-- End Script -->

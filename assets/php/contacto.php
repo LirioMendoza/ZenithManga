@@ -32,7 +32,7 @@ $consulta = "INSERT INTO `comentarios` (nombre, apellido, correo, telefono, mens
 
 // Verificamos que la consulta esta correcta
 if (mysqli_query($conexion, $consulta)) {
-  header("Location: ../contact.html");
+  header("Location: ../../contact.html");
   exit();
 } else {
   http_response_code(500); // Enviar código de error HTTP 500

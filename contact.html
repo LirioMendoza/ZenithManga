@@ -122,21 +122,21 @@
             <br>
             <p>Rellena este formulario para enviarnos un mensaje.</p>
             <br>
-            <form action="/ZenithManga/php/contacto.php" method="post">
-                <label for="nombre"><strong>Nombre:</strong></label>
+            <form action="assets/php/contacto.php" method="post">
+                <label for="nombre">Nombre:</label>
                 <input class="input-form" type="text" id="nombre" name="nombre" placeholder="Tu nombre...">
 
-                <label for="apellido"><strong>Apellido:</strong></label>
+                <label for="apellido">Apellido:</label>
                 <input class="input-form" type="text" id="apellido" name="apellido" placeholder="Tu apellido...">
 
-                <label for="correo"><strong>Correo electrónico:</strong></label>
+                <label for="correo">Correo electrónico:</label>
                 <input class="input-form" type="email" id="correo" name="correo" placeholder="Tu correo electrónico...">
 
-                <label for="telefono"><strong>Teléfono:</strong></label>
+                <label for="telefono">Teléfono:</label>
                 <input class="input-form" type="tel" id="telefono" name="telefono"
                     placeholder="Tu número de teléfono...">
 
-                <label for="mensaje"><strong>Deja tu mensaje o sugerencia:</strong></label>
+                <label for="mensaje">Deja tu mensaje o sugerencia:</label>
                 <textarea class="input-form" id="mensaje" name="mensaje" placeholder="Tu mensaje..."></textarea>
 
                 <div class="politica">
@@ -188,7 +188,7 @@
                         </li>
                         <br>
                         <li style="margin-left: 50px;">
-                            <img src="./img/componentes/fi_unam.png" alt="FI UNAM" width="130">
+                            <img src="assets/img/componentes/fi_unam.png" alt="FI UNAM" width="130">
                         </li>
                     </ul>
                 </div>
@@ -258,11 +258,11 @@
                 </div>
                 <div class="col-auto">
                     <div class="input-group mb-2">
-                        <form action="php/suscripcion.php" method="post" style="display: flex;" name="formulario">
+                        <form action="assets/php/suscripcion.php" method="post" style="display: flex;" name="formulario">
                             <input class="form-control bg-light border-light" type="email" name="correo" id="correo"
                                 placeholder="Correo electronico">
                             <input class="input-group-text btn-success text-light" type="submit" value="Suscribirse">
-                            <input type="hidden" name="redirect" value="../contact.html">
+                            <input type="hidden" name="redirect" value="../../contact.html">
                         </form>
                     </div>
                 </div>
@@ -289,8 +289,9 @@
 
     <!-- Start Script -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="js/validacionComentarios.js"></script>
-    <script src="js/scroll.js"></script>
+    <script src="assets/js/validacionComentarios.js"></script>
+    <script src="assets/js/validacionSuscripciones.js"></script>
+    <script src="assets/js/scroll.js"></script>
     <!-- End Script -->
 </body>
 
