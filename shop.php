@@ -100,7 +100,7 @@
 
     <!-- Body principal -->
     <div class="container-fluid bg-light py-5"
-        style="background-image: url('img/carrusel/fondo.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+        style="background-image: url('assets/img/carrusel/fondo.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
         <div class="container col-lg-8 col-sm-12">
             <h1 style="color: red">Buscador de mangas</h1>
             <form action="#" method="get" class="search-form">
@@ -163,8 +163,7 @@
     </div>
     <br><br>
     <div class="container">
-        <h1 style="color: red">Nuestros Productos</h1>
-        <br><br>
+        <h1 style="color: red">Nuestros productos</h1>
         <div class="row">
             <?php foreach ($data as $key => $value) { ?>
                 <div class="col-sm-6 col-md-4 col-lg-3 mb-3" style="height: 530px;">
@@ -240,7 +239,7 @@
                         </li>
                         <br>
                         <li style="margin-left: 50px;">
-                            <img src="./img/componentes/fi_unam.png" alt="FI UNAM" width="130">
+                            <img src="assets/img/componentes/fi_unam.png" alt="FI UNAM" width="130">
                         </li>
                     </ul>
                 </div>
@@ -310,7 +309,8 @@
                 </div>
                 <div class="col-auto">
                     <div class="input-group mb-2">
-                        <form action="assets/php/suscripcion.php" method="post" style="display: flex;" name="formulario">
+                        <form action="assets/php/suscripcion.php" method="post" style="display: flex;"
+                            name="formulario">
                             <input class="form-control bg-light border-light" type="email" name="correo" id="correo"
                                 placeholder="Correo electronico">
                             <input class="input-group-text btn-success text-light" type="submit" value="Suscribirse">

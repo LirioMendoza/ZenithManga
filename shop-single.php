@@ -103,6 +103,7 @@
     include ("assets/php/conexion.php");
     if (isset($_POST["id"])) {
         $id = $_POST["id"];
+        $idplus = $id;
         $sql = "SELECT id, nombre, descripcion, precio, calificacion, categoria FROM productos WHERE id = $id";
     } else {
         $sql = "SELECT id, nombre, descripcion, precio, calificacion, categoria FROM productos WHERE id = 1";
@@ -115,10 +116,10 @@
     $conn->close();
     ?>
     <div class="container pt-4" style="display: flex; justify-content: flex-end;">
-        <a href="shop.php"><button type="button" class="btn btn-danger">Volver</button></a>
+        <a href="shop.php"><button class="btn btn-primary">Volver</button></a>
     </div>
     <section class="bg-light">
-        <div class="container pb-5">
+        <div class="container pb-4 mb-3">
             <div class="row">
                 <div class="col-lg-4 mt-4">
                     <div class="card mb-3">
@@ -312,7 +313,8 @@
                                         <?php echo $value["nombre"]; ?>
                                     </strong></h1>
                                 <h5 class="py-2"><strong style="color: #339900">
-                                        $<?php echo $value["precio"] * 17; ?> MXN
+                                        $
+                                        <?php echo $value["precio"] * 17; ?> MXN
                                     </strong></h5>
                                 <p class="py-2">
                                     <?php for ($i = 0; $i < $value['calificacion']; $i++) { ?>
@@ -410,6 +412,78 @@
             </div>
         </div>
     </section>
+    <section>
+        <?php
+        include ("assets/php/conexion.php");
+        if ($idplus > 46) {
+            $idplus = 1;
+        }
+        $sql = "SELECT id, nombre, descripcion, precio, calificacion, categoria FROM productos WHERE id > $idplus LIMIT 4;";
+        $result = $conn->query($sql);
+        $data2 = array();
+        while ($row = $result->fetch_assoc()) {
+            $data2[] = $row;
+        }
+        $conn->close();
+        ?>
+        <div class="container mt-1">
+            <h1 style="color: red; margin-left: 2% !important; ">Productos relacionados:</h1>
+        </div>
+        <div class="container" style="display: flex; justify-content: flex-end;">
+            <a href="shop.php"><button class="btn btn-primary">Volver</button></a>
+        </div>
+        <div class="container row mt-4 mb-4">
+            <?php foreach ($data2 as $key => $value) { ?>
+                <div class="col-sm-6 col-md-4 col-lg-3 mb-3" style="height: 530px;">
+                    <div class="card" style="height: 100%;">
+                        <?php
+                        $id = $value['id'];
+                        $imagen = "assets/img/shop/products/" . $id . ".jpg";
+                        if (!file_exists($imagen)) {
+                            $imagen = "assets/img/shop/products/error.jpg";
+                        }
+                        ?>
+                        <img src="<?php echo $imagen; ?>" alt="Card image cap" class="card-img-top" style="height: 150px;">
+                        <div class="card-body">
+                            <div style="height: 10%;">
+                                <h5 class="card-title">
+                                    <?php echo $value['nombre']; ?>
+                                </h5>
+                            </div>
+                            <div style="height: 10%;">
+                                <p style="display: flex; justify-content: flex-end; color: red ;"><strong>
+                                        <?php echo $value['categoria']; ?>
+                                    </strong></p>
+                            </div>
+                            <div style="height: 40%;">
+                                <p style="font-size: 1rem !important;" class="card-text">
+                                    <?php echo $value['descripcion']; ?>
+                                </p>
+                            </div>
+                            <div style="height: 15%;">
+                                <h6 class="card-subtitle mb-2 text-muted"><strong>$
+                                        <?php echo $value['precio'] * 17; ?> MXN
+                                    </strong></h6>
+                            </div>
+                            <div style="height: 10%;">
+                                <form action="shop-single.php" method="post" id="verMasForm">
+                                    <input type="hidden" name="id" value="<?php echo $value['id']; ?>">
+                                    <button type="submit" class="btn btn-primary">Ver más</button>
+                                </form>
+                            </div>
+                            <div class="card-rating" style="height: 15%; display: flex; justify-content: flex-end;">
+                                <?php for ($i = 0; $i < $value['calificacion']; $i++) { ?>
+                                    <i class="fas fa-star"></i>
+                                <?php } ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+    </section>
+
+
     <!-- FIN Body principal -->
 
 
@@ -435,7 +509,7 @@
                         </li>
                         <br>
                         <li style="margin-left: 50px;">
-                            <img src="./img/componentes/fi_unam.png" alt="FI UNAM" width="130">
+                            <img src="assets/img/componentes/fi_unam.png" alt="FI UNAM" width="130">
                         </li>
                     </ul>
                 </div>
