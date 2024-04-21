@@ -339,7 +339,7 @@
             <div class="container" style="display: flex; justify-content: flex-end;">
                 <a href="shop.php"><button class="btn btn-primary">Volver</button></a>
             </div>
-            <div class="container row mb-4">
+            <div class="container row mb-4 mt-4">
                 <?php foreach ($data2 as $key => $value) { ?>
                     <div class="col-sm-6 col-md-4 col-lg-3 mb-3" style="height: 850px; ">
                         <div class="card" style="height: 100%;">
@@ -529,9 +529,6 @@
 
     <!-- Start Script -->
     <script src="assets/js/validacionSuscripciones.js"></script>
-    <script src="assets/js/templatemo.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script src="assets/js/jquery-1.11.0.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- End Script -->
 </body>
