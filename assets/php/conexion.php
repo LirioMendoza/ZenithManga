@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "12345678";
 $dbname = "zenithmanga";
 
 // Conexión a la base de datos

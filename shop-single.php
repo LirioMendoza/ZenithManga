@@ -113,6 +113,7 @@
                 $sql = "SELECT id, nombre, descripcion, precio, calificacion, categoria FROM productos WHERE id = $id";
             } else {
                 $sql = "SELECT id, nombre, descripcion, precio, calificacion, categoria FROM productos WHERE id = 1";
+                $id = 6;
             }
             $result = $conn->query($sql);
             $data = array();
@@ -133,7 +134,6 @@
                     <div class="col-lg-4 mt-4">
                         <div class="card mb-3">
                             <?php
-                            $id = $_POST["id"];
                             $imagen = "assets/img/products/" . $id . ".png";
                             if (!file_exists($imagen)) {
                                 $imagen = "assets/img/products/error.jpeg";
