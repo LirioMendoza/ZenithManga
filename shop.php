@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Proyecto Final-About</title>
+    <title>Proyecto Final-Shop</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Estilos CSS de bootstrap -->
@@ -12,6 +12,8 @@
     <!-- Estilos de letra -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <!-- Iconos -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
 </head>
 
 <body>
@@ -102,11 +104,127 @@
 
     <!-- Body principal -->
     <section>
+        <div class="container-fluid bg-light py-5"
+            style="background-image: url('assets/img/bg/fondo.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+            <div class="container col-lg-8 col-sm-12">
+                <h1 style="color: red">Buscador de mangas</h1>
+                <form action="#" method="get" class="search-form">
+                    <div class="form-group">
+                        <label for="categoria">Categoría:</label>
+                        <select name="categoria" id="categoria" class="form-control">
+                            <option value="">Todas</option>
+                            <option value="anime">Anime</option>
+                            <option value="manga">Manga</option>
+                            <option value="seinen">Seinen</option>
+                            <option value="shonen">Shonen</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="orden">Orden:</label>
+                        <select name="orden" id="orden" class="form-control">
+                            <option value="nombre_asc">Nombre (A-Z)</option>
+                            <option value="nombre_desc">Nombre (Z-A)</option>
+                            <option value="calificacion_desc">Calificación (mayor a menor)</option>
+                            <option value="calificacion_asc">Calificación (menor a mayor)</option>
+                        </select>
+                    </div>
+                    <input type="hidden" name="search" value="active">
+                    <button type="submit" class="btn btn-success">Buscar</button>
+                </form>
+                <?php
+                include ("assets/php/conexion.php");
+                if (isset($_GET['search'])) {
+                    $categoria = isset($_GET['categoria']) ? $_GET['categoria'] : "";
+                    $orden = isset($_GET['orden']) ? $_GET['orden'] : 'nombre_asc';
+                    $sql = "SELECT * FROM productos ";
+                    if ($categoria) {
+                        $sql .= " WHERE categoria = '$categoria' ";
+                    }
+                    switch ($orden) {
+                        case "nombre_asc":
+                            $sql .= " ORDER BY nombre ASC;";
+                            break;
+                        case "nombre_desc":
+                            $sql .= " ORDER BY nombre DESC;";
+                            break;
+                        case "calificacion_desc":
+                            $sql .= " ORDER BY calificacion DESC;";
+                            break;
+                        case "calificacion_asc":
+                            $sql .= " ORDER BY calificacion ASC;";
+                            break;
+                    }
+                } else {
+                    $sql = "SELECT id, nombre, descripcion, precio, calificacion, categoria FROM productos";
+                }
+                $result = $conn->query($sql);
+                $data = array();
+                while ($row = $result->fetch_assoc()) {
+                    $data[] = $row;
+                }
+                $conn->close();
+                ?>
+            </div>
+        </div>
+        <br><br>
+        <div class="container">
+            <h1 style="color: red">Nuestros productos</h1>
+            <div class="row">
+                <?php foreach ($data as $key => $value) { ?>
+                    <div class="col-sm-6 col-md-4 col-lg-3 mb-3" style="height: 850px; margin-top: 2rem">
+                        <div class="card" style="height: 100%;">
+                            <?php
+                            $id = $value['id'];
+                            $imagen = "assets/img/products/" . $id . ".png";
+                            if (!file_exists($imagen)) {
+                                $imagen = "assets/img/products/error.jpeg";
+                            }
+                            ?>
+                            <img src="<?php echo $imagen; ?>" alt="Card image cap" class="card-img-top"
+                                style="height: 500px;">
+                            <div class="card-body">
+                                <div style="height: 10%;">
+                                    <h5 class="card-title">
+                                        <?php echo $value['nombre']; ?>
+                                    </h5>
+                                </div>
+                                <div style="height: 10%;">
+                                    <p style="display: flex; justify-content: flex-end; color: red ;"><strong>
+                                            <?php echo $value['categoria']; ?>
+                                        </strong></p>
+                                </div>
+                                <div style="height: 40%;">
+                                    <p style="font-size: 1rem !important;" class="card-text">
+                                        <?php echo $value['descripcion']; ?>
+                                    </p>
+                                </div>
+                                <div style="height: 15%;">
+                                    <h6 class="card-subtitle mb-2 text-muted"><strong>$
+                                            <?php echo $value['precio'] * 17; ?> MXN
+                                        </strong></h6>
+                                </div>
+                                <div style="height: 10%;">
+                                    <form action="shop-single.php" method="post" id="verMasForm">
+                                        <input type="hidden" name="id" value="<?php echo $value['id']; ?>">
+                                        <button type="submit" class="btn btn-primary">Ver más</button>
+                                    </form>
+                                </div>
+                                <div class="card-rating" style="height: 15%; display: flex; justify-content: flex-end;">
+                                    <?php for ($i = 0; $i < $value['calificacion']; $i++) { ?>
+                                        <img src="assets/img/components/estrella1.png" alt="" style="width: 20px; height: 20px">
+                                    <?php } ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
     </section>
     <!-- FIN Body principal -->
 
     <!-- Footer -->
-    <section>
+    <section style="margin-top: 5%">
         <footer class="bg-dark" id="tempaltemo_footer">
             <div class="container">
                 <div class="row">
@@ -213,7 +331,7 @@
                                     placeholder="Correo electronico">
                                 <input class="input-group-text btn-success text-light" type="submit"
                                     value="Suscribirse">
-                                <input type="hidden" name="redirect" value="../../about.html">
+                                <input type="hidden" name="redirect" value="../../shop.php">
                             </form>
                         </div>
                     </div>
