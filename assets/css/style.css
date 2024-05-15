@@ -195,10 +195,7 @@ textarea {
 .presentacion {
   width: 100%;
   height: 30rem;
-  background-image: url('../img/bg/fondo.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  background-color: rgb(255, 241, 241) !important;
 }
 
 .presentacion h1 {
@@ -326,10 +323,7 @@ textarea {
 /*---- Estilos del CARRUSEL ----*/
 /* Fondo */
 #template-mo-zay-hero-carousel {
-  background-image: url('../img/bg/fondo.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
+  background-color: rgb(255, 241, 241) !important;
 }
 
 /* Estado actual */
