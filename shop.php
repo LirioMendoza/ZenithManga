@@ -197,7 +197,10 @@
                                         </strong></h6>
                                 </div>
                                 <div style="height: 10%;">
-                                    <button type="submit" class="btn btn-primary">Ver más</button>
+                                    <form action="shop-single.php" method="post" id="verMasForm">
+                                        <input type="hidden" name="id" value="<?php echo $value['id']; ?>">
+                                        <button type="submit" class="btn btn-primary">Ver más</button>
+                                    </form>
                                 </div>
                                 <div class="card-rating" style="height: 15%; display: flex; justify-content: flex-end;">
                                     <?php for ($i = 0; $i < $value['calificacion']; $i++) { ?>
