@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Estilos CSS de bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Estilos propios -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Estilos de letra -->
@@ -85,8 +85,11 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contacto</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#relacionados">Otros productos</a>
+                            </li>
                         </ul>
-                    </div>
+                    </div> 
                 </div>
             </div>
         </nav>
@@ -298,10 +301,10 @@
                                     </div>
                                     <div class="row pb-3">
                                         <div class="col d-grid">
-                                            <button class="btn btn-success btn-size" >Comprar</button>
+                                            <button class="btn-success btn-lg" disabled>Comprar</button>
                                         </div>
                                         <div class="col d-grid">
-                                            <button class="btn btn-success btn-size">Añadir al carrito</button>
+                                            <button class="btn-success btn-lg" disabled>Añadir al carrito</button>
                                         </div>
                                     </div>
                                 </div>
@@ -313,10 +316,10 @@
         </section>
 
         <!-- Segunda seccion -->
-        <section>
+        <section id="relacionados">
             <?php
             include ("assets/php/conexion.php");
-            $sql = "SELECT id, nombre, descripcion, precio, calificacion, categoria FROM productos WHERE id > 1 LIMIT 3;";
+            $sql = "SELECT id, nombre, descripcion, precio, calificacion, categoria FROM productos WHERE id > 1 LIMIT 4;";
             $result = $conn->query($sql);
             $data2 = array();
             while ($row = $result->fetch_assoc()) {
@@ -405,10 +408,7 @@
                                 <img src="assets/img/components/correo.png" alt="" style="width: 25px;">
                                 <a class="text-decoration-none" href="#">administracion@zenithmanga.com</a>
                             </li>
-                            <br>
-                            <li style="margin-left: 50px;">
-                                <img src="assets/img/components/fi_unam.png" alt="FI UNAM" width="130">
-                            </li>
+                            
                         </ul>
                     </div>
                     <!-- Links de la pagina -->
@@ -421,9 +421,7 @@
                             <li><a
                                     class="text-decoration-none" href="about.html">
                                     Nosotros</a></li>
-                            <li><a
-                                    class="text-decoration-none" href="shop.php">
-                                    Tienda</a></li>
+                            
                             <li><a
                                     class="text-decoration-none" href="shop.php">
                                     Productos</a></li>
@@ -520,7 +518,7 @@
 
     <!-- Start Script -->
     <script src="assets/js/validacionSuscripciones.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- End Script -->
 </body>
 

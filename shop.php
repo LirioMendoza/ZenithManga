@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Estilos CSS de bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Estilos propios -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Estilos de letra -->
@@ -20,7 +20,7 @@
     <!-- Header -->
     <section>
         <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="templatemo_nav_top">
-            <div class="container text-light nav">
+            <div class="container text-light">
                 <div class="w-100 d-flex justify-content-between">
                     <div id="cuadro-texto">
                         <p>° González Del Moral Ángel</p>
@@ -57,7 +57,7 @@
     <!-- Nav -->
     <section>
         <nav class="navbar navbar-expand-lg navbar-light shadow">
-            <div class="container d-flex justify-content-between align-items-center nav">
+            <div class="container d-flex justify-content-between align-items-center">
                 <!-- Logo empresa -->
                 <a class="navbar-brand text-warning logo h1 align-self-center" href="index.html">
                     Zenith
@@ -85,10 +85,10 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contacto</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#productos">Productos</a>
+                            </li>
                         </ul>
-                    </div>
-                    <br>
-                    <div class="navbar align-self-center d-flex">
                     </div>
                 </div>
             </div>
@@ -98,7 +98,8 @@
 
     <!-- Body principal -->
     <section>
-        <div class="container-fluid bg-light py-5" style="background-color: rgb(255, 241, 241) !important;">
+        <div class="container-fluid bg-light py-5"
+        style="background-color: rgb(255, 244, 244) !important;">
             <div class="container col-lg-8 col-sm-12">
                 <h1 style="color: red">Buscador de mangas</h1>
                 <form action="#" method="get" class="search-form">
@@ -160,7 +161,7 @@
             </div>
         </div>
         <br><br>
-        <div class="container">
+        <div class="container" id="productos">
             <h1 style="color: red">Nuestros productos</h1>
             <div class="row">
                 <?php foreach ($data as $key => $value) { ?>
@@ -232,24 +233,26 @@
                             <li>
                                 <img src="assets/img/components/phone.png" alt="" style="width: 25px;">
                                 <a class="text-decoration-none" href="#">01-800-123456789</a>
-                            </li>
-                            <li>
-                                <img src="assets/img/components/correo.png" alt="" style="width: 25px;">
-                                <a class="text-decoration-none" href="#">administracion@zenithmanga.com</a>
-                            </li>
+                            
+                            
                         </ul>
                     </div>
                     <!-- Links de la pagina -->
                     <div class="col-md-4 pt-5">
                         <h2 class="h2 text-light border-bottom pb-3 border-light">Nosotros</h2>
                         <ul class="list-unstyled text-light footer-link-list">
-                            <li><a class="text-decoration-none" href="index.html">
+                            <li><a
+                                    class="text-decoration-none" href="index.html">
                                     Inicio</a></li>
-                            <li><a class="text-decoration-none" href="about.html">
+                            <li><a
+                                    class="text-decoration-none" href="about.html">
                                     Nosotros</a></li>
-                            <li><a class="text-decoration-none" href="shop.php">
+                            
+                            <li><a
+                                    class="text-decoration-none" href="shop.php">
                                     Productos</a></li>
-                            <li><a class="text-decoration-none" href="contact.html">
+                            <li><a
+                                    class="text-decoration-none" href="contact.html">
                                     Contacto</a></li>
                         </ul>
                     </div>
@@ -258,19 +261,19 @@
                         <h2 class="h2 text-light border-bottom pb-3 border-light">Autores</h2>
                         <ul class="list-unstyled text-light footer-link-list">
                             <li>
-
+                                
                                 González Del Moral Ángel
                             </li>
                             <li>
-
+                                
                                 Mendoza de los Santos Lirio Aketzalli
                             </li>
                             <li>
-
+                                
                                 Ortíz Camacho Jessica Elizabeth
                             </li>
                             <li>
-
+                                
                                 Villeda Hernández Erick Ricardo
                             </li>
                         </ul>
@@ -341,7 +344,7 @@
 
     <!-- Start Script -->
     <script src="assets/js/validacionSuscripciones.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
     <!-- End Script -->
 </body>
 
