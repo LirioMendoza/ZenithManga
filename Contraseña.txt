@@ -1,0 +1,3 @@
+nombre:		eq8mangas
+usuario:	root
+contraseña:	12345678
