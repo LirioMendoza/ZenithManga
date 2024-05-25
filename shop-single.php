@@ -12,8 +12,6 @@
     <!-- Estilos de letra -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-    <!-- Iconos -->
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
 </head>
 
 <body>
@@ -39,7 +37,7 @@
                     </div>
                     <div>
                         <!-- Logos redes sociales -->
-                        <a class="text-light" href="http://facebook.com/" target="_blank" rel="sponsored"> <img
+                        <a class="text-light" href="http://facebook.com/" target="_blank"<img
                                 src="assets/img/components/facebook.png" alt="" style="width: 27px;"></a>
                         <a class="text-light" href="https://www.instagram.com/" target="_blank"><img
                                 src="assets/img/components/instagram.png" alt="" style="width: 27px;"></a>

@@ -13,7 +13,7 @@ $consulta = "INSERT INTO `suscripciones` (correo) VALUES ('$correo')";
 
 // Verificamos que la consulta esta correcta
 if (mysqli_query($conn, $consulta)) {
-    header("Location: $redirect");
+  header("Location: $redirect");
   exit();
 } else {
   http_response_code(500); // Enviar código de error HTTP 500

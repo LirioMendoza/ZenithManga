@@ -37,7 +37,7 @@
                     </div>
                     <div>
                         <!-- Logos redes sociales -->
-                        <a class="text-light" href="http://facebook.com/" target="_blank" rel="sponsored"> <img
+                        <a class="text-light" href="http://facebook.com/" target="_blank"<img
                                 src="assets/img/components/facebook.png" alt="" style="width: 27px;"></a>
                         <a class="text-light" href="https://www.instagram.com/" target="_blank"><img
                                 src="assets/img/components/instagram.png" alt="" style="width: 27px;"></a>
@@ -83,6 +83,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contacto</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#servicios">Servicios</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -93,6 +96,74 @@
 
     <!-- Body principal -->
     <section>
+        <div class="container-fluid bg-light py-5" style="background-color: rgb(255, 244, 244) !important;">
+            <div class="col-md-10 m-auto text-justify">
+                <h1 class="text-center">Nosotros</h1>
+                <h1 class="h1 text-warning logo" style="margin-top: 5rem;">Sobre ZenithManga</h1>
+                <p style="margin-top: 1rem; margin-bottom: 2rem;"><strong>ZenithManga</strong> fue creada en el año
+                    <span class="highlight">2020</span> con la
+                    misión de
+                    acercar el maravilloso mundo del manga a todos los rincones de habla hispana. Nuestro objetivo
+                    es
+                    proporcionar una experiencia de compra de mangas fácil, rápida y segura, con un catálogo extenso
+                    y en
+                    constante actualización.
+                </p>
+                <center>
+                    <div class="col-md-9 col-sm-10 col-lg-9 p-4">
+                        <video width="100%" controls>
+                            <source src="assets/img/video/video.mp4" type="video/mp4">
+                            Tu navegador no soporta el formato de video.
+                        </video>
+                    </div>
+                </center>
+                <h2 class="h1 text-warning logo" style="margin-top: 5rem;">¿Por qué destacamos?</h2>
+                <p style="margin-top: 1rem;">En ZenithManga, nos esforzamos por ofrecer más que solo productos; nos
+                    dedicamos a brindar una
+                    experiencia única a nuestros clientes. Esto es lo que nos distingue de otras tiendas de mangas:
+                </p>
+                <ul>
+                    <li>Extensa variedad de títulos, desde los clásicos hasta las novedades más recientes.</li>
+                    <li>Precios competitivos y ofertas especiales regularmente.</li>
+                    <li>Atención al cliente personalizada y soporte en todo momento.</li>
+                    <li>Envíos rápidos y seguros a nivel nacional e internacional.</li>
+                    <li>Eventos y promociones exclusivas para nuestros clientes.</li>
+                </ul>
+
+                <h2 class="h1 text-warning logo" style="margin-top: 5rem;" id="servicios">Servicios que ofrecemos</h2>
+                <p style="margin-top: 1rem;">En ZenithManga, ofrecemos una gama de servicios diseñados para satisfacer
+                    todas las necesidades
+                    de los
+                    amantes del manga:</p>
+                <ul>
+                    <li>Venta de mangas físicos y digitales.</li>
+                    <li>Suscripciones mensuales para recibir las últimas novedades.</li>
+                    <li>Preventa de próximos lanzamientos.</li>
+                    <li>Reseñas y recomendaciones personalizadas.</li>
+                    <li>Contenido exclusivo y noticias sobre el mundo del manga.</li>
+                </ul>
+                <p style="margin-top: 5rem;">En ZenithManga, nuestra pasión es el manga y nuestro compromiso es con
+                    nuestros clientes.
+                    ¡Gracias por
+                    elegirnos y ser parte de nuestra comunidad!</p>
+                <!-- Lienzo -->
+                <center>
+                    <canvas id="canvas" width="400" height="200"></canvas>
+                </center>
+                <script>
+                    window.onload = function () {
+                        var canvas = document.getElementById('canvas');
+                        var ctx = canvas.getContext('2d');
+                        // Dibujar el kanji "Welcome" (歓迎) con separación y margen izquierdo
+                        ctx.font = 'bold 172px Arial'; // Tamaño de la fuente
+                        ctx.fillStyle = '#000000';
+                        ctx.textAlign = 'center'; // Alineación izqurda para el margen
+                        ctx.fillText('歓', canvas.width / 2 + 110, canvas.height / 2 + 50); // Posición del primer caracter
+                        ctx.fillText('迎', canvas.width / 2 - 110, canvas.height / 2 + 50); // Posición del segundo caracter
+                    }
+                </script>
+            </div>
+        </div>
     </section>
     <!-- FIN Body principal -->
 
@@ -117,25 +188,20 @@
                                 <img src="assets/img/components/correo.png" alt="" style="width: 25px;">
                                 <a class="text-decoration-none" href="#">administracion@zenithmanga.com</a>
                             </li>
-                           
+
                         </ul>
                     </div>
                     <!-- Links de la pagina -->
                     <div class="col-md-4 pt-5">
                         <h2 class="h2 text-light border-bottom pb-3 border-light">Nosotros</h2>
                         <ul class="list-unstyled text-light footer-link-list">
-                            <li><a
-                                    class="text-decoration-none" href="index.html">
+                            <li><a class="text-decoration-none" href="index.html">
                                     Inicio</a></li>
-                            <li><a
-                                    class="text-decoration-none" href="about.html">
+                            <li><a class="text-decoration-none" href="about.html">
                                     Nosotros</a></li>
-                            
-                            <li><a
-                                    class="text-decoration-none" href="shop.php">
+                            <li><a class="text-decoration-none" href="shop.php">
                                     Productos</a></li>
-                            <li><a
-                                    class="text-decoration-none" href="contact.html">
+                            <li><a class="text-decoration-none" href="contact.html">
                                     Contacto</a></li>
                         </ul>
                     </div>
@@ -144,19 +210,15 @@
                         <h2 class="h2 text-light border-bottom pb-3 border-light">Autores</h2>
                         <ul class="list-unstyled text-light footer-link-list">
                             <li>
-                                
                                 González Del Moral Ángel
                             </li>
                             <li>
-                                
                                 Mendoza de los Santos Lirio Aketzalli
                             </li>
                             <li>
-                                
                                 Ortíz Camacho Jessica Elizabeth
                             </li>
                             <li>
-                                
                                 Villeda Hernández Erick Ricardo
                             </li>
                         </ul>

@@ -12,7 +12,7 @@ $mensaje = $_POST["mensaje"];
 $nombre = mysqli_real_escape_string($conn, $nombre);
 $apellido = mysqli_real_escape_string($conn, $apellido);
 $correo = mysqli_real_escape_string($conn, $correo);
-$telefono= mysqli_real_escape_string($conn, $telefono);
+$telefono = mysqli_real_escape_string($conn, $telefono);
 $mensaje = mysqli_real_escape_string($conn, $mensaje);
 
 // Insertar los datos en la base de datos
@@ -25,5 +25,4 @@ if (mysqli_query($conn, $consulta)) {
 } else {
   http_response_code(500); // Enviar código de error HTTP 500
 }
-
 ?>

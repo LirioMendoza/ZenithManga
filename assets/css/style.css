@@ -282,9 +282,13 @@ textarea {
 }
 
 .genero input[type="radio"] {
-  display: inline-block; /* o bien: float: left; */
+  display: inline-block;
+  /* o bien: float: left; */
   margin-right: 5px;
 }
+
+
+
 /*
 #######################################################
           Estilos generales a ID's
@@ -321,7 +325,7 @@ textarea {
   padding: 0 !important;
 }
 
-#cuadro-texto p{
+#cuadro-texto p {
   font-size: 0.8rem !important;
   margin: 0 !important;
   padding: 0 !important;

@@ -12,8 +12,6 @@
     <!-- Estilos de letra -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-    <!-- Iconos -->
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
 </head>
 
 <body>
@@ -39,7 +37,7 @@
                     </div>
                     <div>
                         <!-- Logos redes sociales -->
-                        <a class="text-light" href="http://facebook.com/" target="_blank" rel="sponsored"> <img
+                        <a class="text-light" href="http://facebook.com/" target="_blank"<img
                                 src="assets/img/components/facebook.png" alt="" style="width: 27px;"></a>
                         <a class="text-light" href="https://www.instagram.com/" target="_blank"><img
                                 src="assets/img/components/instagram.png" alt="" style="width: 27px;"></a>
@@ -98,8 +96,7 @@
 
     <!-- Body principal -->
     <section>
-        <div class="container-fluid bg-light py-5"
-        style="background-color: rgb(255, 244, 244) !important;">
+        <div class="container-fluid bg-light py-5" style="background-color: rgb(255, 244, 244) !important;">
             <div class="container col-lg-8 col-sm-12">
                 <h1 style="color: red">Buscador de mangas</h1>
                 <form action="#" method="get" class="search-form">
@@ -233,26 +230,19 @@
                             <li>
                                 <img src="assets/img/components/phone.png" alt="" style="width: 25px;">
                                 <a class="text-decoration-none" href="#">01-800-123456789</a>
-                            
-                            
                         </ul>
                     </div>
                     <!-- Links de la pagina -->
                     <div class="col-md-4 pt-5">
                         <h2 class="h2 text-light border-bottom pb-3 border-light">Nosotros</h2>
                         <ul class="list-unstyled text-light footer-link-list">
-                            <li><a
-                                    class="text-decoration-none" href="index.html">
+                            <li><a class="text-decoration-none" href="index.html">
                                     Inicio</a></li>
-                            <li><a
-                                    class="text-decoration-none" href="about.html">
+                            <li><a class="text-decoration-none" href="about.html">
                                     Nosotros</a></li>
-                            
-                            <li><a
-                                    class="text-decoration-none" href="shop.php">
+                            <li><a class="text-decoration-none" href="shop.php">
                                     Productos</a></li>
-                            <li><a
-                                    class="text-decoration-none" href="contact.html">
+                            <li><a class="text-decoration-none" href="contact.html">
                                     Contacto</a></li>
                         </ul>
                     </div>
@@ -261,19 +251,15 @@
                         <h2 class="h2 text-light border-bottom pb-3 border-light">Autores</h2>
                         <ul class="list-unstyled text-light footer-link-list">
                             <li>
-                                
                                 González Del Moral Ángel
                             </li>
                             <li>
-                                
                                 Mendoza de los Santos Lirio Aketzalli
                             </li>
                             <li>
-                                
                                 Ortíz Camacho Jessica Elizabeth
                             </li>
                             <li>
-                                
                                 Villeda Hernández Erick Ricardo
                             </li>
                         </ul>
